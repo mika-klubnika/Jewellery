@@ -1,0 +1,25 @@
+:root {
+  --transparent: transparent;
+  --black: #000000;
+  --dark: #1d1613;
+  --gray: #9b9997;
+  --white: #ffffff;
+  --gold: #a87b62;
+  --light: #f6f5f4;
+
+
+  --poppins: "Poppins", "Arial", sans-serif;
+  --cormorant-garamond: "Cormorant Garamond", "Times New Roman", serif;
+}
+
+
+$max-desktop: 1200px;
+// $min-desktop: 1220px;
+
+$max-tablet: 1023px;
+// $tablet: 768px;
+
+$max-mobile: 767px;
+$mobile: 320px;
+
+$resolution: 2dppx;
