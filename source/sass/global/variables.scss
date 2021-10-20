@@ -7,19 +7,18 @@
   --gold: #a87b62;
   --light: #f6f5f4;
 
+  --white-015: rgba(255, 255, 255, 0.15);
 
   --poppins: "Poppins", "Arial", sans-serif;
   --cormorant-garamond: "Cormorant Garamond", "Times New Roman", serif;
 }
 
 
-$max-desktop: 1200px;
-// $min-desktop: 1220px;
+$desktop: 1200px;
 
-$max-tablet: 1023px;
-// $tablet: 768px;
+$tablet: 1023px;
 
-$max-mobile: 767px;
-$mobile: 320px;
+$mobile: 767px;
+$min-mobile: 320px;
 
 $resolution: 2dppx;

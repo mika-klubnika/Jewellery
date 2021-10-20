@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,55 +17,76 @@
 
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
-  <header class="header">
-    <div class="header__wrap">
-      <div class="header__wrapper container">
-        <form action="https://echo.htmlacademy.ru" method="post">
-          <label for="search">
-            <span class="visually-hidden">
-              site search
-            </span>
-            <svg width="14" height="14">
-              <use xlink:href="img/sprite.svg#search"></use>
-            </svg>
-          </label>
-          <input type="search" name="search" id="search" placeholder="Type here to search">
-        </form>
-        <a class="header__logo">
-          <img src="img/logo.svg" alt="Jewellery logo">
-        </a>
-        <div class="header__inner">
-          <a href="#">Login</a>
-          <button>
-            <span>Cart 0</span>
-          </button>
-        </div>
+  <header class="header header--nojs">
+    <div class="header__wrapper container">
+      <button class="header__toggle" type="button" aria-label="Открыть меню">
+        <svg width="25" height="18">
+          <use xlink:href="img/sprite.svg#menu"></use>
+        </svg>
+      </button>
+
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <label for="search">
+          <span class="visually-hidden">site search</span>
+          <svg width="14" height="14">
+            <use xlink:href="img/sprite.svg#search"></use>
+          </svg>
+        </label>
+        <input type="search" name="search" id="search" placeholder="Type here to search">
+      </form>
+
+      <a class="header__logo" aria-label="Jewellery logo">
+        <svg width="66" height="66">
+          <use xlink:href="img/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <a class="header__login" href="#">Login</a>
+
+      <button class="header__cart">
+        <span>Cart 0</span>
+        <svg width="20" height="18">
+          <use xlink:href="img/sprite.svg#cart"></use>
+        </svg>
+      </button>
+
+      <div class="navigation">
+        <ul class="navigation__list">
+          <li class="navigation__item">
+            <a href="#">What’s new</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Chokers</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Necklaces</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Rings</a>
+          </li>
+          <li class="navigation__item">
+            <a href="#">Earrings</a>
+          </li>
+        </ul>
+
+        <ul class="navigation__list navigation__list--contacts">
+          <li class="navigation__item navigation__item--contacts">
+            <a href="#">About CH</a>
+          </li>
+          <li class="navigation__item navigation__item--contacts">
+            <a href="#">Stores & Hours</a>
+          </li>
+          <li class="navigation__item navigation__item--contacts">
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <ul class="navigation container">
-      <li class="navigation__item">
-        <a href="#">What’s new</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#">Chokers</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#">Necklaces</a>
-      </li>
-      <li class="navigation__item">
-        <a href="#">
-          Rings
-        </a>
-      </li>
-      <li class="navigation__item">
-        <a href="#">
-          Earrings
-        </a>
-      </li>
-    </ul>
   </header>
 
   <script src="js/main.js"></script>
 </body>
+
 </html>

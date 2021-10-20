@@ -1,27 +1,108 @@
 .header {
+  position: relative;
+
   padding-top: 30px;
   padding-bottom: 19px;
-  width: 100%;
-}
 
-.header__wrap {
-  border-bottom: 1px solid var(--light);
+  &::before {
+    content: "";
+    position: absolute;
+    top: 115px;
+
+    width: 100%;
+    height: 1px;
+    background-color: var(--light);
+
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    &--open {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100vw;
+      height: 100vh;
+      overflow-y: auto;
+      background-color: var(--gold);
+    }
+
+    &--nojs {
+      background-color: var(--gold);
+    }
+  }
 }
 
 .header__wrapper {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content max-content;
+  grid-template-rows: auto auto;
+  row-gap: 19px;
 
   padding-bottom: 20px;
+
+  @media (max-width: $tablet) {
+    grid-template-rows: auto;
+    grid-template-columns: max-content 1fr max-content;
+    row-gap: 0;
+  }
+}
+
+.header__toggle {
+  display: none;
+
+  @media (max-width: $tablet) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+
+    display: block;
+    padding: 0;
+
+    width: 25px;
+    height: 40px;
+
+    border: none;
+    background-color: var(--transparent);
+  }
+}
+
+.header__toggle svg {
+  stroke: var(--dark);
 }
 
 .header form {
+  grid-row: 1/2;
+  grid-column: 1/2;
+
   padding-top: 2px;
-  width: 400px;
+
+  @media (max-width: $tablet) {
+    position: relative;
+    grid-row: 2/3;
+    grid-column: 1/-1;
+
+    display: none;
+    margin-top: 40px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-top: 30px;
+  }
 }
 
 .header label {
   margin-right: 10px;
+  fill: var(--dark);
+
+  @media (max-width: $tablet) {
+    position: absolute;
+    top: 14px;
+    left: 12px;
+    fill: var(--white);
+  }
 }
 
 .header input {
@@ -31,25 +112,55 @@
   border: none;
   background-color: var(--transparent);
 
+  @media (max-width: $tablet) {
+    width: 100%;
+    background-color: var(--white-015);
+    border-radius: 21px;
+  }
+
   &::placeholder {
     font-weight: 500;
     font-size: 14px;
     line-height: 21px;
 
     color: var(--gray);
+
+    @media (max-width: $tablet) {
+      font-size: 0;
+    }
   }
 }
 
-.header__inner {
-  display: flex;
-  justify-content: flex-end;
+.header__logo {
+  grid-row: 1/2;
+  grid-column: 2/3;
 
-  padding-top: 12px;
-  width: 400px;
+  display: flex;
+  justify-content: center;
+  margin-right: 200px;
+
+  @media (max-width: $tablet) {
+    margin: 0;
+  }
 }
 
-.header__inner>* {
+.header__logo svg {
+  width: 66px;
+  height: 66px;
+  color: var(--gold);
+
+  @media (max-width: $mobile) {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.header__login {
+  grid-row: 1/2;
+  grid-column: 3/4;
+
   margin-left: 40px;
+  margin-top: 12px;
   height: min-content;
 
   font-weight: 500;
@@ -57,12 +168,93 @@
   line-height: 21px;
 
   color: var(--dark);
+
+  @media (max-width: $tablet) {
+    grid-row: 4/5;
+    grid-column: 1/-1;
+
+    display: none;
+    margin-left: 0;
+    margin-top: 0;
+
+    font-size: 18px;
+    line-height: 130%;
+
+    color: var(--white);
+  }
 }
 
-.header__inner button {
-  padding: 0;
+.header__cart {
+  grid-row: 1/2;
+  grid-column: 4/5;
 
+  margin-left: 40px;
+  margin-top: 12px;
+  padding: 0;
+  height: min-content;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  white-space: nowrap;
+
+  color: var(--dark);
   border: none;
   background-color: var(--transparent);
   cursor: pointer;
+
+  @media (max-width: $tablet) {
+    grid-column: 3/4;
+    margin-left: 0;
+  }
+}
+
+.header__cart span {
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.header__cart svg {
+  display: none;
+
+  @media (max-width: $tablet) {
+    display: block;
+    stroke: var(--dark);
+  }
+}
+
+.header--nojs {
+  .header__toggle {
+    display: none;
+  }
+}
+
+.header--open,
+.header--nojs {
+  @media (max-width: $tablet) {
+    .header__wrapper {
+      grid-template-rows: auto auto auto auto;
+    }
+
+    form {
+      display: flex;
+    }
+
+    .header__login {
+      display: flex;
+    }
+
+    .header__toggle svg {
+      stroke: var(--white);
+    }
+
+    .header__logo svg {
+      color: var(--white);
+    }
+
+    .header__cart svg {
+      stroke: var(--white);
+    }
+  }
 }

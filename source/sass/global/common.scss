@@ -1,9 +1,19 @@
 .container {
-  max-width: $max-desktop;
-  min-width: $mobile;
+  max-width: $desktop;
+  min-width: $min-mobile;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @media (max-width: $tablet) {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .visually-hidden {
