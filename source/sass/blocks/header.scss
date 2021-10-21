@@ -21,26 +21,36 @@
   @media (max-width: $tablet) {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
 
-    &--open {
+  @media (max-width: $mobile) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  &--open {
+    @media (max-width: $tablet) {
       position: fixed;
       top: 0;
       left: 0;
       z-index: 10;
+      padding-bottom: 80px;
+
       width: 100vw;
       height: 100vh;
       overflow-y: auto;
       background-color: var(--gold);
     }
 
-    &--nojs {
-      background-color: var(--gold);
+    @media (max-width: $mobile) {
+      padding-bottom: 50px;
     }
   }
 
-  @media (max-width: $mobile) {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  &--nojs {
+    @media (max-width: $tablet) {
+      background-color: var(--gold);
+    }
   }
 }
 

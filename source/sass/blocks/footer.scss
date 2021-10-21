@@ -22,7 +22,7 @@
   }
 
   @media (max-width: $mobile) {
-    grid-template-columns: auto;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
     row-gap: 20px;
   }
