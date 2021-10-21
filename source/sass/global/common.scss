@@ -28,3 +28,25 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.section h2 {
+  margin-bottom: 35px;
+
+  font-family: var(--cormorant-garamond);
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+}
+
+.section p {
+  margin-bottom: 70px;
+  padding-bottom: 10px;
+
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  border-bottom: 1px solid var(--gold);
+}

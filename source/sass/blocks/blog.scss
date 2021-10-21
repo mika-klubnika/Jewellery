@@ -1,0 +1,136 @@
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.blog__list {
+  display: grid;
+  grid-template-columns: 570px 570px;
+  grid-template-rows: 300px 300px;
+  gap: 30px;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 678px;
+    grid-template-rows: 300px 300px 300px;
+    row-gap: 50px;
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 290px;
+    grid-template-rows: 512px 512px 512px;
+    row-gap: 40px;
+  }
+}
+
+.blog__item {
+  position: relative;
+  display: flex;
+
+  &--big-picture {
+    grid-row: 1/-1;
+    grid-column: 2/3;
+
+    @media (max-width: $tablet) {
+      grid-row: 3/4;
+      grid-column: 1/2;
+    }
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+  }
+}
+
+.blog__item img {
+  @media (max-width: $tablet) {
+    width: 339px;
+    height: 300px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 290px;
+    height: 256px;
+  }
+}
+
+
+.blog__item--big-picture img {
+  @media (max-width: $tablet) {
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.blog__read {
+  padding: 70px 60px;
+  width: 285px;
+  height: 300px;
+
+  text-align: center;
+
+  background-color: var(--gold-light);
+
+  @media (max-width: $tablet) {
+    padding-right: 88px;
+    padding-left: 88px;
+    width: 339px;
+    height: 300px;
+  }
+
+  &--big-picture {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    @media (max-width: $tablet) {
+      position: static;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    padding: 49px 60px;
+    width: 290px;
+    height: 256px;
+  }
+}
+
+.blog__read>* {
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.blog__read span {
+  font-family: var(--poppins);
+  font-size: 14px;
+
+  color: var(--gray);
+}
+
+.blog__read h3 {
+  margin-top: 25px;
+  margin-bottom: 30px;
+
+  font-family: var(--cormorant-garamond);
+  font-weight: 600;
+  font-size: 26px;
+
+  color: var(--black);
+}
+
+.blog__read a {
+  padding-bottom: 10px;
+
+  font-family: var(--poppins);
+  font-size: 16px;
+
+  color: var(--dark);
+  border-bottom: 1px solid var(--gold);
+}
