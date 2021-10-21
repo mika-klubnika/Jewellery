@@ -1,0 +1,97 @@
+.mailing {
+  grid-column: 1/2;
+
+  @media (max-width: $tablet) {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  @media (max-width: $mobile) {
+    grid-column: 1/2;
+  }
+}
+
+.mailing h3 {
+  margin-bottom: 25px;
+
+  font-family: var(--cormorant-garamond);
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+
+  color: var(--white);
+
+  @media (max-width: $mobile) {
+    padding-right: 50px;
+  }
+}
+
+.mailing p {
+  margin-bottom: 50px;
+
+  font-family: var(--poppins);
+  font-size: 16px;
+  line-height: 130%;
+
+  color: var(--gray);
+
+  @media (max-width: $mobile) {
+    padding-right: 50px;
+  }
+}
+
+.mailing form {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--white);
+}
+
+.mailing label {
+  width: 70%;
+
+  @media (max-width: $mobile) {
+    width: 60%;
+  }
+}
+
+.mailing input {
+  width: 100%;
+  height: 40px;
+
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  color: var(--white);
+  border: none;
+  background-color: var(--transparent);
+
+  &::placeholder {
+    color: var(--gray);
+  }
+}
+
+.mailing button {
+  padding: 0;
+
+  font-family: var(--poppins);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  white-space: nowrap;
+
+  color: var(--white);
+  border: none;
+  background-color: var(--transparent);
+}
+
+.mailing span {
+  margin-right: 12px;
+}
+
+.mailing svg {
+  transform: rotate(180deg);
+  stroke: var(--white);
+}

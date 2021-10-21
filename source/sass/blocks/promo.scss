@@ -1,0 +1,58 @@
+.promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 463px;
+
+  font-family: var(--cormorant-garamond);
+
+  color: var(--white);
+  background-color: var(--gold);
+  background-image: url("../img/promo.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  @media (min-resolution: $resolution) {
+    background-image: url("../img/promo@2x.jpg");
+  }
+
+  @media (max-width: $tablet) {
+    background-image: url("../img/promo-tablet@2x.jpg");
+
+    @media (min-resolution: $resolution) {
+      background-image: url("../img/promo-tablet@2x.jpg");
+    }
+  }
+
+  @media (max-width: $mobile) {
+    background-image: url("../img/promo-mobile@2x.jpg");
+
+    @media (min-resolution: $resolution) {
+      background-image: url("../img/promo-mobile@2x.jpg");
+    }
+  }
+}
+
+.promo p {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+
+  @media (max-width: $mobile) {
+    font-size: 38px;
+  }
+}
+
+.promo span {
+  font-style: italic;
+  font-size: 38px;
+  line-height: 130%;
+
+  @media (max-width: $mobile) {
+    font-size: 34px;
+  }
+}
