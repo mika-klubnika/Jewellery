@@ -1,0 +1,127 @@
+.accordion {
+  padding-right: 100px;
+  padding-left: 100px;
+  width: 100%;
+
+  color: var(--dark);
+
+  @media (max-width: $tablet) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.accordion__item {
+  border: 1px solid var(--gold);
+  border-radius: 0;
+  cursor: pointer;
+
+  &:not(:first-child) {
+    border-top: none;
+  }
+}
+
+.accordion__button {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 50px 38px;
+
+  @media (max-width: $tablet) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 22px 25px;
+  }
+}
+
+.accordion__button h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
+
+.accordion__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 20px;
+
+  padding: 0;
+  border: none;
+  background-color: var(--transparent);
+}
+
+.accordion__toggle svg {
+  width: 15px;
+  height: 8px;
+
+  @media (max-width: $tablet) {
+    width: 23px;
+    height: 12px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 20px;
+    height: 10px;
+  }
+}
+
+.accordion__block {
+  display: none;
+
+  padding-top: 20px;
+  width: 58%;
+
+  font-size: 16px;
+  line-height: 130%;
+
+  @media (max-width: $tablet) {
+    width: 95%;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
+
+.accordion__item--active .accordion__button {
+  padding-bottom: 0;
+}
+
+.accordion__item--active .accordion__block,
+.accordion__item--nojs .accordion__block {
+  display: flex;
+  flex-direction: column;
+
+  padding: 20px 38px 50px 38px;
+
+  @media (max-width: $tablet) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 24px;
+  }
+}
+
+.accordion__item--active .accordion__toggle {
+  transform: rotate(180deg);
+}
+
+.accordion__item--nojs .accordion__toggle {
+  background-image: none;
+}

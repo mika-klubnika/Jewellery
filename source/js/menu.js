@@ -1,3 +1,4 @@
+'use strict';
 //МЕНЮ
 const header = document.querySelector('.header');
 const navigation = header.querySelector('.navigation');

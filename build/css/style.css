@@ -363,6 +363,7 @@ template {
   --gold: #a87b62;
   --light: #f6f5f4;
   --gold-light: #f0eae4;
+  --gold-light-03: rgba(240, 234, 228, 0.35);
   --white-015: rgba(255, 255, 255, 0.15);
   --poppins: "Poppins", "Arial", sans-serif;
   --cormorant-garamond: "Cormorant Garamond", "Times New Roman", serif; }
@@ -924,6 +925,17 @@ p {
     .promo span {
       font-size: 34px; } }
 
+.new {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.slider__button {
+  width: 30px;
+  height: 15px; }
+
 .gallery {
   display: flex;
   flex-direction: column;
@@ -974,6 +986,10 @@ p {
 @media (max-width: 479px) {
   .gallery__item:nth-child(4) {
     display: none; } }
+
+.gallery__item img {
+  display: flex;
+  background-color: var(--gold-light-03); }
 
 .gallery__item--big-picture {
   grid-row: 1/-1;
@@ -1030,15 +1046,17 @@ p {
     .blog__item {
       flex-direction: column; } }
 
-@media (max-width: 1023px) {
-  .blog__item img {
-    width: 339px;
-    height: 300px; } }
-
-@media (max-width: 767px) {
-  .blog__item img {
-    width: 290px;
-    height: 256px; } }
+.blog__item img {
+  display: flex;
+  background-color: var(--gold-light-03); }
+  @media (max-width: 1023px) {
+    .blog__item img {
+      width: 339px;
+      height: 300px; } }
+  @media (max-width: 767px) {
+    .blog__item img {
+      width: 290px;
+      height: 256px; } }
 
 @media (max-width: 1023px) {
   .blog__item--big-picture img {
@@ -1093,3 +1111,108 @@ p {
   font-size: 16px;
   color: var(--dark);
   border-bottom: 1px solid var(--gold); }
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.accordion {
+  padding-right: 100px;
+  padding-left: 100px;
+  width: 100%;
+  color: var(--dark); }
+  @media (max-width: 1023px) {
+    .accordion {
+      padding-right: 0;
+      padding-left: 0; } }
+
+.accordion__item {
+  border: 1px solid var(--gold);
+  border-radius: 0;
+  cursor: pointer; }
+  .accordion__item:not(:first-child) {
+    border-top: none; }
+
+.accordion__button {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 38px; }
+  @media (max-width: 1023px) {
+    .accordion__button {
+      padding-left: 50px;
+      padding-right: 50px; } }
+  @media (max-width: 767px) {
+    .accordion__button {
+      padding: 22px 25px; } }
+
+.accordion__button h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%; }
+  @media (max-width: 767px) {
+    .accordion__button h3 {
+      font-size: 16px;
+      line-height: 140%; } }
+
+.accordion__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background-color: var(--transparent); }
+
+.accordion__toggle svg {
+  width: 15px;
+  height: 8px; }
+  @media (max-width: 1023px) {
+    .accordion__toggle svg {
+      width: 23px;
+      height: 12px; } }
+  @media (max-width: 767px) {
+    .accordion__toggle svg {
+      width: 20px;
+      height: 10px; } }
+
+.accordion__block {
+  display: none;
+  padding-top: 20px;
+  width: 58%;
+  font-size: 16px;
+  line-height: 130%; }
+  @media (max-width: 1023px) {
+    .accordion__block {
+      width: 95%; } }
+  @media (max-width: 767px) {
+    .accordion__block {
+      font-size: 14px;
+      line-height: 140%; } }
+
+.accordion__item--active .accordion__button {
+  padding-bottom: 0; }
+
+.accordion__item--active .accordion__block,
+.accordion__item--nojs .accordion__block {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 38px 50px 38px; }
+  @media (max-width: 1023px) {
+    .accordion__item--active .accordion__block,
+    .accordion__item--nojs .accordion__block {
+      padding-left: 50px;
+      padding-right: 50px; } }
+  @media (max-width: 767px) {
+    .accordion__item--active .accordion__block,
+    .accordion__item--nojs .accordion__block {
+      padding-right: 25px;
+      padding-left: 25px;
+      padding-bottom: 24px; } }
+
+.accordion__item--active .accordion__toggle {
+  transform: rotate(180deg); }
+
+.accordion__item--nojs .accordion__toggle {
+  background-image: none; }

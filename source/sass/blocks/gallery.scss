@@ -67,6 +67,11 @@
   }
 }
 
+.gallery__item  img {
+  display: flex;
+  background-color: var(--gold-light-03);
+}
+
 .gallery__item--big-picture {
   grid-row: 1/-1;
   grid-column: 2/3;

@@ -50,6 +50,9 @@
 }
 
 .blog__item img {
+  display: flex;
+  background-color: var(--gold-light-03);
+
   @media (max-width: $tablet) {
     width: 339px;
     height: 300px;
