@@ -1,0 +1,46 @@
+.product {
+  color: var(--dark);
+}
+
+.product__image img {
+  display: flex;
+
+  width: 270px;
+  height: 284px;
+
+  background-color: var(--gold-light-03);
+
+  @media (max-width: $tablet) {
+    width: 324px;
+    height: 340px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 130px;
+    height: 136px;
+  }
+}
+
+.product__description {
+  padding-top: 25px;
+  text-align: center;
+}
+
+.product__title {
+  margin-bottom: 15px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+}
+
+.product__price {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 130%;
+}
+
+.product__dollar {
+  margin-right: 2px;
+  font-style: normal;
+}
