@@ -96,7 +96,31 @@
 }
 
 .catalog__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: var(--dark);
+
+  border: none;
+  background-color: var(--transparent);
+
   @media (max-width: $mobile) {
     display: none;
+  }
+}
+
+.catalog__pagination {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: var(--gray);
+
+  border: none;
+  background-color: var(--transparent);
+
+  &--active {
+    color: var(--dark);
   }
 }

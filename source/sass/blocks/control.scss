@@ -1,0 +1,74 @@
+.control {
+  margin-top: 30px;
+}
+
+.control__range-wrap {
+  position: relative;
+  margin-bottom: 15px;
+  --left-width: 40px;
+  --right-width: 135px;
+}
+
+.control__scale {
+  position: relative;
+  height: 2px;
+  background-color: var(--gold-light);
+}
+
+.control__range .control__bar {
+  position: absolute;
+  height: 2px;
+  right: calc(100% - var(--right-width));
+  left: var(--left-width);
+  background-color: var(--gold);
+}
+
+.control__range .control__toggle {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: 8px solid var(--gold);
+  background-color: var(--gold);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.control__range .control__toggle--min {
+  left: var(--left-width);
+}
+
+.control__range .control__toggle--max {
+  left: var(--right-width);
+}
+
+.control__range .control__toggle:hover {
+  transform: scale(1.3);
+}
+
+.control__price {
+  display: flex;
+  justify-content: flex-end;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+
+  color: var(--dark);
+}
+
+.control__price label {
+  padding-left: 0;
+}
+
+.control__price input {
+  width: 65px;
+  border: none;
+
+  &::placeholder {
+    display: flex;
+    justify-content: center;
+  }
+}

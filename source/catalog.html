@@ -91,7 +91,109 @@
     </section>
 
     <section class="catalog__wrapper container">
-      <div class="catalog__filter"></div>
+      <aside class="catalog__filter filter">
+        <button class="filter__toggle" type="button" aria-label="Открыть фильтр">Filter</button>
+
+        <form class="form-accordion filter__form" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="form-accordion__item form-accordion__item--nojs">
+            <div class="filter__title form-accordion__button">
+              <h3>Product</h3>
+              <svg class="form-accordion__toggle form-accordion__toggle--close" width="16" height="15">
+                <use xlink:href="img/sprite.svg#pointer"></use>
+              </svg>
+            </div>
+            <ul class="form-accordion__block">
+              <li>
+                <input class="visually-hidden" type="checkbox" name="necklaces" id="necklaces" checked>
+                <label for="necklaces">Necklaces</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="chokers" id="chokers" checked>
+                <label for="chokers">Chokers</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="rings" id="rings">
+                <label for="rings">Rings</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="earrings" id="earrings" checked>
+                <label for="earrings">Earrings</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form-accordion__item form-accordion__item--nojs">
+            <div class="filter__title form-accordion__button">
+              <h3>Material</h3>
+              <svg class="form-accordion__toggle form-accordion__toggle--close" width="16" height="15">
+                <use xlink:href="img/sprite.svg#pointer"></use>
+              </svg>
+            </div>
+            <ul class="form-accordion__block">
+              <li>
+                <input class="visually-hidden" type="checkbox" name="gold" id="gold" checked>
+                <label for="gold">Gold</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="silver" id="silver">
+                <label for="silver">Silver</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form-accordion__item form-accordion__item--nojs">
+            <div class="filter__title form-accordion__button">
+              <h3>Collection</h3>
+              <svg class="form-accordion__toggle form-accordion__toggle--close" width="16" height="15">
+                <use xlink:href="img/sprite.svg#pointer"></use>
+              </svg>
+            </div>
+            <ul class="form-accordion__block">
+              <li>
+                <input class="visually-hidden" type="checkbox" name="pink-flamingo" id="pink-flamingo" checked>
+                <label for="pink-flamingo">Pink flamingo</label>
+              </li>
+              <li>
+                <input class="visually-hidden" type="checkbox" name="dreams" id="dreams">
+                <label for="dreams">Dreams</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form-accordion__item form-accordion__item--nojs">
+            <div class="filter__title form-accordion__button">
+              <h3>Price</h3>
+              <svg class="form-accordion__toggle form-accordion__toggle--close" width="16" height="15">
+                <use xlink:href="img/sprite.svg#pointer"></use>
+              </svg>
+            </div>
+
+            <div class="control form-accordion__block">
+              <div class="control__range-wrap">
+                <div class="control__range">
+                  <div class="control__scale">
+                    <div class="control__bar"></div>
+                  </div>
+                  <div class="control__toggle control__toggle--min"></div>
+                  <div class="control__toggle control__toggle--max"></div>
+                </div>
+              </div>
+              <div class="control__price">
+                <label for="min-price">$
+                  <input type="number" name="min-price" id="min-price" placeholder="$ 55" value="55" min="0">
+                </label>
+                <label for="max-price">$
+                  <input type="number" name="max-price" id="max-price" placeholder="$ 155" value="155" >
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <button type="submit">Apply</button>
+          <button type="reset">Clear All</button>
+        </form>
+      </aside>
+
       <div>
         <ul class="catalog__product">
           <li class="catalog__item">
@@ -314,11 +416,11 @@
         <div class="catalog__buttons">
           <button class="catalog__button catalog__button--pre" type="button">Previous</button>
           <div>
-            <button type="button">1</button>
-            <button type="button">2</button>
-            <button type="button">3</button>
-            <button type="button">4</button>
-            <button type="button">5</button>
+            <button class="catalog__pagination catalog__pagination--active" type="button">1</button>
+            <button class="catalog__pagination" type="button">2</button>
+            <button class="catalog__pagination" type="button">3</button>
+            <button class="catalog__pagination" type="button">4</button>
+            <button class="catalog__pagination" type="button">5</button>
           </div>
           <button class="catalog__button catalog__button--next" type="button">Next</button>
         </div>

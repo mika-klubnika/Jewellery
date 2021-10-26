@@ -365,6 +365,7 @@ template {
   --gold-light: #f0eae4;
   --gold-light-03: rgba(240, 234, 228, 0.35);
   --white-015: rgba(255, 255, 255, 0.15);
+  --dark-light: rgba(219, 213, 208, 0.24);
   --poppins: "Poppins", "Arial", sans-serif;
   --cormorant-garamond: "Cormorant Garamond", "Times New Roman", serif; }
 
@@ -1648,6 +1649,192 @@ p {
     .catalog__buttons {
       justify-content: center; } }
 
-@media (max-width: 767px) {
-  .catalog__button {
+.catalog__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--dark);
+  border: none;
+  background-color: var(--transparent); }
+  @media (max-width: 767px) {
+    .catalog__button {
+      display: none; } }
+
+.catalog__pagination {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  color: var(--gray);
+  border: none;
+  background-color: var(--transparent); }
+  .catalog__pagination--active {
+    color: var(--dark); }
+
+.filter {
+  color: var(--dark); }
+
+@media (max-width: 1023px) {
+  .filter__form {
     display: none; } }
+
+.filter__form--open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  background-color: var(--white);
+  box-shadow: 0px 5px 32px var(--dark-light); }
+
+.filter fieldset {
+  padding: 28px 25px;
+  border: 1px solid var(--gold);
+  border-radius: 0;
+  cursor: pointer; }
+  .filter fieldset:not(:first-child) {
+    border-top: none; }
+
+.filter__title {
+  display: flex;
+  justify-content: space-between; }
+
+.filter__title h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%; }
+
+.filter ul {
+  padding-top: 30px; }
+
+.filter li:not(:last-child) {
+  margin-bottom: 15px; }
+
+.filter label {
+  position: relative;
+  padding-left: 25px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: var(--dark); }
+
+.filter input + label::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--gold);
+  border-radius: 0; }
+
+.filter input:checked + label::before {
+  background-color: var(--gold); }
+
+.filter button {
+  height: 68px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+  background-color: var(--gold);
+  border: 1px solid var(--gold);
+  cursor: pointer; }
+
+.filter button[type="submit"] {
+  margin-top: 25px;
+  width: 250px;
+  color: var(--white); }
+
+.filter button[type="reset"] {
+  margin-top: 25px;
+  width: 250px;
+  background-color: var(--white);
+  color: var(--dark); }
+
+.filter__toggle {
+  display: none; }
+  @media (max-width: 1023px) {
+    .filter__toggle {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+      width: 100%;
+      color: var(--white); } }
+
+.control {
+  margin-top: 30px; }
+
+.control__range-wrap {
+  position: relative;
+  margin-bottom: 15px;
+  --left-width: 40px;
+  --right-width: 135px; }
+
+.control__scale {
+  position: relative;
+  height: 2px;
+  background-color: var(--gold-light); }
+
+.control__range .control__bar {
+  position: absolute;
+  height: 2px;
+  right: calc(100% - var(--right-width));
+  left: var(--left-width);
+  background-color: var(--gold); }
+
+.control__range .control__toggle {
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  border: 8px solid var(--gold);
+  background-color: var(--gold);
+  border-radius: 50%;
+  cursor: pointer; }
+
+.control__range .control__toggle--min {
+  left: var(--left-width); }
+
+.control__range .control__toggle--max {
+  left: var(--right-width); }
+
+.control__range .control__toggle:hover {
+  transform: scale(1.3); }
+
+.control__price {
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: var(--dark); }
+
+.control__price label {
+  padding-left: 0; }
+
+.control__price input {
+  width: 65px;
+  border: none; }
+  .control__price input::placeholder {
+    display: flex;
+    justify-content: center; }
+
+.form-accordion__block {
+  display: none; }
+
+.form-accordion__item--active .form-accordion__button {
+  padding-bottom: 0; }
+
+.form-accordion__item--active .form-accordion__block,
+.form-accordion__item--nojs .form-accordion__block {
+  display: flex;
+  flex-direction: column; }
+
+.form-accordion__item--active .form-accordion__toggle {
+  transform: rotate(180deg); }
+
+.form-accordion__item--nojs .form-accordion__toggle {
+  background-image: none; }

@@ -1,0 +1,21 @@
+.form-accordion__block {
+  display: none;
+}
+
+.form-accordion__item--active .form-accordion__button {
+  padding-bottom: 0;
+}
+
+.form-accordion__item--active .form-accordion__block,
+.form-accordion__item--nojs .form-accordion__block {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-accordion__item--active .form-accordion__toggle {
+  transform: rotate(180deg);
+}
+
+.form-accordion__item--nojs .form-accordion__toggle {
+  background-image: none;
+}
