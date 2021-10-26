@@ -21,6 +21,21 @@
   }
 }
 
+.product__image--catalog img {
+  width: 270px;
+  height: 272px;
+
+  @media (max-width: $tablet) {
+    width: 206px;
+    height: 208px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 130px;
+    height: 136px;
+  }
+}
+
 .product__description {
   padding-top: 25px;
   text-align: center;

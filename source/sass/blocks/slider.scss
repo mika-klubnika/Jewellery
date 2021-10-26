@@ -3,14 +3,40 @@
 }
 
 .slider__wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
   overflow: hidden;
+
+  @media (max-width: $min-desktop) {
+    width: 870px;
+  }
+
+  @media (max-width: $tablet) {
+    width: 678px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 450px;
+  }
+
+  @media (max-width: $mid-mobile) {
+    width: 290px;
+  }
 }
 
 .slider__button {
   position: absolute;
   top: -120px;
+
   width: 50px;
   height: 50px;
+
+  border: none;
+  background-color: var(--transparent);
+
+  cursor: pointer;
 
   &--prev {
     left: 0;
@@ -19,6 +45,18 @@
   &--next {
     right: 0;
   }
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.slider__button svg {
+  stroke: var(--gold)
+}
+
+.slider__button--next svg {
+  transform: rotate(180deg);
 }
 
 .slider__list {
@@ -27,18 +65,27 @@
   margin-right: -15px;
 
   width: 500%;
+
+  position: relative;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 500%;
 }
 
 .slider__item {
   padding-left: 15px;
   padding-right: 15px;
 
-  width: 270px;
-}
+  width: 100%;
+  flex: 0 0 300px;
 
-.slider__pagination {
-  display: flex;
-  justify-content: center;
+  @media (max-width: $tablet) {
+    flex: 0 0 354px;
+  }
 
-  margin-top: 60px;
+  @media (max-width: $mobile) {
+    flex: 0 0 160px;
+  }
 }

@@ -13,6 +13,12 @@
   grid-template-rows: 300px 300px;
   gap: 30px;
 
+  @media (max-width: $min-desktop) {
+    grid-template-columns: 475px 475px;
+    grid-template-rows: 255px 255px;
+    row-gap: 15px;
+  }
+
   @media (max-width: $tablet) {
     grid-template-columns: 678px;
     grid-template-rows: 300px 300px 300px;
@@ -53,6 +59,11 @@
   display: flex;
   background-color: var(--gold-light-03);
 
+  @media (max-width: $min-desktop) {
+    width: 247px;
+    height: 255px;
+  }
+
   @media (max-width: $tablet) {
     width: 339px;
     height: 300px;
@@ -66,9 +77,23 @@
 
 
 .blog__item--big-picture img {
+
+  @media (max-width: $min-desktop) {
+    width: 100%;
+    height: 100%;
+  }
+
   @media (max-width: $tablet) {
+    width: 339px;
+    height: 300px;
+
     object-fit: cover;
     object-position: top;
+  }
+
+  @media (max-width: $mobile) {
+    width: 290px;
+    height: 256px;
   }
 }
 
@@ -81,9 +106,14 @@
 
   background-color: var(--gold-light);
 
+  @media (max-width: $min-desktop) {
+    padding: 50px 30px;
+    width: 247px;
+    height: 255px;
+  }
+
   @media (max-width: $tablet) {
-    padding-right: 88px;
-    padding-left: 88px;
+    padding: 70px 88px;
     width: 339px;
     height: 300px;
   }

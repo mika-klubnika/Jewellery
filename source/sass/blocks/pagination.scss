@@ -1,0 +1,51 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 60px;
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+
+  &--mobile {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: flex;
+    }
+  }
+}
+
+.pagination__item {
+  &--tablet {
+    display: none;
+
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+}
+
+.pagination__button {
+  padding: 7px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: var(--gray);
+
+  border: none;
+  background-color: var(--transparent);
+
+  cursor: pointer;
+
+  &--active {
+    color: var(--dark);
+  }
+
+  &--mobile {
+    color: var(--dark);
+  }
+}
