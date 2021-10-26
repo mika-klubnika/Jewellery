@@ -2,7 +2,11 @@
   display: flex;
   justify-content: center;
 
-  margin-top: 60px;
+  margin-top: 43px;
+
+  @media (max-width: $tablet) {
+    margin-top: 34px;
+  }
 
   @media (max-width: $mobile) {
     display: none;
@@ -13,6 +17,7 @@
 
     @media (max-width: $mobile) {
       display: flex;
+      margin-top: 22px;
     }
   }
 }

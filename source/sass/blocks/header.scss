@@ -2,7 +2,6 @@
   position: relative;
 
   padding-top: 30px;
-  padding-bottom: 19px;
 
   &::before {
     content: "";
@@ -79,12 +78,17 @@
 
     display: block;
     padding: 0;
+    padding-top: 23px;
 
     width: 25px;
     height: 40px;
 
     border: none;
     background-color: var(--transparent);
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 15px;
   }
 }
 
@@ -156,7 +160,7 @@
 
   display: flex;
   justify-content: center;
-  margin-right: 200px;
+  margin-right: 220px;
 
   @media (max-width: $tablet) {
     margin: 0;
@@ -225,6 +229,11 @@
   @media (max-width: $tablet) {
     grid-column: 3/4;
     margin-left: 0;
+    padding-top: 12px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 5px;
   }
 }
 

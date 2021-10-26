@@ -3,13 +3,33 @@
   flex-direction: column;
   align-items: center;
 
-  padding-top: 50px;
-  padding-bottom: 132px;
+  padding-top: 55px;
+  padding-bottom: 130px;
 
   color: var(--dark);
 
   @media (max-width: $tablet) {
+    padding-top: 22px;
     padding-bottom: 80px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 10px;
+    padding-bottom: 70px;
+  }
+}
+
+.gallery h2 {
+  margin-bottom: 30px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 20px;
+  }
+}
+
+.gallery p {
+  @media (max-width: $mobile) {
+    margin-bottom: 45px;
   }
 }
 

@@ -1,5 +1,6 @@
 .social-icon {
   grid-column: 3/4;
+  padding-top: 5px;
 
   @media (max-width: $tablet) {
     grid-column: 2/3;
@@ -11,14 +12,17 @@
     grid-row: 3/4;
 
     display: flex;
+
+    padding-top: 3px;
+    margin-left: -4px;
   }
 }
 
 .social-icon__item {
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 
   @media (max-width: $mobile) {
-    margin-right: 15px;
+    margin-right: 13px;
     margin-bottom: 0;
   }
 }
@@ -38,4 +42,9 @@
 
 .social-icon__item svg {
   margin-right: 15px;
+
+  @media (max-width: $mobile) {
+    width: 20px;
+    height: 20px;
+  }
 }

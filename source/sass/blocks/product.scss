@@ -37,12 +37,16 @@
 }
 
 .product__description {
-  padding-top: 25px;
+  padding-top: 20px;
   text-align: center;
+
+  @media (max-width: $mobile) {
+    padding-top: 15px;
+  }
 }
 
 .product__title {
-  margin-bottom: 15px;
+  margin-bottom: 7px;
 
   font-weight: 500;
   font-size: 16px;
