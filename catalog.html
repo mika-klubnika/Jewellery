@@ -22,7 +22,7 @@
 <body>
   <header class="header header--nojs">
     <div class="header__wrapper container">
-      <button class="header__toggle" type="button" aria-label="Открыть меню">
+      <button class="header__toggle" type="button" aria-label="Open menu">
         <svg width="25" height="18">
           <use xlink:href="img/sprite.svg#menu"></use>
         </svg>
@@ -94,11 +94,11 @@
     </section>
 
     <section class="catalog__wrapper container">
-      <aside class="catalog__filter filter">
-        <button class="filter__toggle" type="button" aria-label="Открыть фильтр">Filter</button>
+      <aside class="catalog__filter filter filter--nojs">
+        <button class="filter__open" type="button" aria-label="Open filter">Filter</button>
 
         <form class="form-accordion filter__form" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset class="form-accordion__item form-accordion__item--nojs">
+          <fieldset class="form-accordion__item form-accordion__item--active form-accordion__item--nojs">
             <div class="filter__title form-accordion__button">
               <h3>Product</h3>
               <svg class="form-accordion__toggle form-accordion__toggle--close" width="16" height="15">
@@ -194,6 +194,11 @@
 
           <button type="submit">Apply</button>
           <button type="reset">Clear All</button>
+          <button class="filter__close" type="button" aria-label="Close filter">
+            <svg width="14" height="14">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
         </form>
       </aside>
 

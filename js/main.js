@@ -1,15 +1,10 @@
 'use strict';
 //аккордеон
+const accordion = document.querySelector('.accordion');
+const accordionButton = document.querySelectorAll('.accordion__button');
+const accordionItems = document.querySelectorAll('.accordion__item');
 
-if (
-  document.querySelector('.accordion') &&
-  document.querySelectorAll('.accordion__button') &&
-  document.querySelectorAll('.accordion__item')) {
-
-  const accordion = document.querySelector('.accordion');
-  const accordionButton = accordion.querySelectorAll('.accordion__button');
-  const accordionItems = accordion.querySelectorAll('.accordion__item');
-
+if (accordion && accordionButton && accordionItems) {
   accordionItems.forEach(item => {
     item.classList.remove('accordion__item--nojs');
   })
@@ -27,40 +22,34 @@ if (
   }
 
   accordionButton.forEach(block => block.addEventListener('click', toggleAccordion));
-}
+};
 
 'use strict';
 //ФИЛЬТР
-// const header = document.querySelector('.header');
+const filter = document.querySelector('.filter');
 const filterForm = document.querySelector('.filter__form');
-const filterToggle = document.querySelector('.filter__toggle');
+const filterOpen = document.querySelector('.filter__open');
+const filterClose = document.querySelector('.filter__close');
 
-if (filterForm && filterToggle) {
-  // header.classList.remove('header--nojs');
+if (filterForm && filterOpen && filterClose) {
+  filter.classList.remove('filter--nojs');
 
-  filterToggle.addEventListener('click', () => {
-    filterForm.classList.toggle('filter__form--open');
+  filterOpen.addEventListener('click', () => {
+    filterForm.classList.add('filter__form--open');
+  })
 
-    if (filterForm.classList.contains('filter__form--open')) {
-      filterToggle.setAttribute('aria-label', 'Закрыть меню');
-    } else {
-      filterToggle.setAttribute('aria-label', 'Открыть меню');
-    }
-  });
-}
+  filterClose.addEventListener('click', () => {
+    filterForm.classList.remove('filter__form--open');
+  })
+};
 
 'use strict';
 //аккордеон
+const accordionForm = document.querySelector('.form-accordion');
+const accordionFormButton = document.querySelectorAll('.form-accordion__button');
+const accordionFormItems = document.querySelectorAll('.form-accordion__item');
 
-if (
-  document.querySelector('.form-accordion') &&
-  document.querySelectorAll('.form-accordion__button') &&
-  document.querySelectorAll('.form-accordion__item')) {
-
-  const accordionForm = document.querySelector('.form-accordion');
-  const accordionFormButton = accordionForm.querySelectorAll('.form-accordion__button');
-  const accordionFormItems = accordionForm.querySelectorAll('.form-accordion__item');
-
+if (accordionForm && accordionFormButton && accordionFormItems) {
   accordionFormItems.forEach(item => {
     item.classList.remove('form-accordion__item--nojs');
   })
@@ -73,12 +62,11 @@ if (
         thisItem.classList.toggle('form-accordion__item--active');
         return;
       }
-      item.classList.remove('form-accordion__item--active');
     });
   }
 
   accordionFormButton.forEach(block => block.addEventListener('click', toggleAccordion));
-}
+};
 
 'use strict';
 
@@ -141,7 +129,7 @@ if (modal && modalButton && modalBase && modalClose && form && email && password
       }
     }
   });
-}
+};
 
 'use strict';
 //МЕНЮ
@@ -157,16 +145,16 @@ if (header && toggle && navigation) {
     header.classList.toggle('header--open');
 
     if (header.classList.contains('header--open')) {
-      toggle.setAttribute('aria-label', 'Закрыть меню');
+      toggle.setAttribute('aria-label', 'Close menu');
     } else {
-      toggle.setAttribute('aria-label', 'Открыть меню');
+      toggle.setAttribute('aria-label', 'Open menu');
     }
   });
 
   linkLogin.addEventListener('click', () => {
     header.classList.remove('header--open');
   });
-}
+};
 
 // const swiper = new Swiper('.swiper', {
 //   // Optional parameters
