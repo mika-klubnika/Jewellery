@@ -44,7 +44,7 @@
         </svg>
       </a>
 
-      <a class="header__login" href="#">Login</a>
+      <a class="header__login" href="login.html">Login</a>
 
       <button class="header__cart">
         <span>Cart 0</span>
@@ -534,6 +534,41 @@
       </ul>
     </div>
   </footer>
+
+  <section class="login">
+    <div class="login__base">
+      <div class="login__wrap">
+        <div class="login__title">
+          <picture>
+            <source type="image/webp" srcset="img/sweet-ice-cream-photography-login.webp, img/sweet-ice-cream-photography-login@2x.webp 2x">
+            <!-- 1х: 430px; 2x: 860px -->
+            <img src="img/sweet-ice-cream-photography-login.jpg" srcset="img/sweet-ice-cream-photography-login@2x.jpg  2x" alt="the pendant"
+              width="430" height="138">
+          </picture>
+          <h2>Log In</h2>
+        </div>
+
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <label>
+            <input type="email" name="login-email" id="email" placeholder="Your E-mail" required>
+          </label>
+          <label>
+            <input type="password" name="login-password" id="password" placeholder="Password" required>
+          </label>
+          <a href="#">Forgot your password?</a>
+          <button type="submit">Log In</button>
+          <div class="login__account">
+            <p>Don’t have an account?&nbsp;<a href="#">Sign up</a></p>
+          </div>
+          <button class="login__close" type="button" aria-label="Закрыть">
+            <svg width="14" height="14">
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
 
   <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
   <script src="js/main.js"></script>

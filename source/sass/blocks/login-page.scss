@@ -1,0 +1,23 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 30px;
+}
+
+.login-page__logo svg {
+  width: 66px;
+  height: 66px;
+  color: var(--gold);
+}
+
+.login-page__login {
+  display: flex;
+  justify-content: center;
+}
+
+.login-page__wrap {
+  position: static;
+  margin-top: 50px;
+  transform: none;
+}
