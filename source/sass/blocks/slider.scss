@@ -50,11 +50,25 @@
   @media (max-width: $mobile) {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid var(--gold);
+  }
 }
 
 .slider__button svg {
   display: flex;
-  stroke: var(--gold)
+  stroke: var(--gold);
+
+  &:hover,
+  &:focus {
+    stroke: var(--dark);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .slider__button--next svg {
@@ -63,17 +77,15 @@
 }
 
 .slider__list {
-  display: flex;
-  margin-left: -15px;
-  margin-right: -15px;
-
-  width: 500%;
-
   position: relative;
   left: 0;
+
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+
+  margin-left: -15px;
+  margin-right: -15px;
   width: 500%;
 }
 

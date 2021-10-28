@@ -1,26 +1,62 @@
 .filter {
   color: var(--dark);
+
+  input + label::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--gold);
+    border-radius: 0;
+  }
+
+  input:checked + label::before {
+    background-color: var(--gold);
+  }
+
+  input:not(:disabled):hover + label::before {
+    border: 1px solid var(--dark);
+  }
+
+  input:not(:disabled):hover + label {
+    color: var(--gold);
+  }
 }
 
 .filter__form {
   @media (max-width: $tablet) {
     display: none;
+
+
+    &--open {
+      position: absolute;
+      top: 27px;
+      left: 0;
+      z-index: 8;
+
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      padding-bottom: 40px;
+
+      width: 423px;
+
+      background-color: var(--white);
+      box-shadow: 0 5px 32px var(--dark-light);
+    }
   }
 
-  &--open {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    background-color: var(--white);
-    box-shadow: 0px 5px 32px var(--dark-light);
+  @media (max-width: $mobile) {
+    left: 50%;
+    width: 270px;
+    transform: translateX(-50%);
   }
 }
 
 .filter fieldset {
-  padding: 28px 25px;
+  padding: 0;
 
   border: 1px solid var(--gold);
   border-radius: 0;
@@ -29,11 +65,22 @@
   &:not(:first-child) {
     border-top: none;
   }
+
+  @media (max-width: $tablet) {
+    border: none;
+    border-bottom: 1px solid var(--gold);
+  }
 }
 
 .filter__title {
   display: flex;
   justify-content: space-between;
+
+  padding: 24px 22px 22px 22px;
+
+  @media (max-width: $tablet) {
+    padding: 40px 40px 40px 21px;
+  }
 }
 
 .filter__title h3 {
@@ -43,18 +90,18 @@
 }
 
 .filter ul {
-  padding-top: 30px;
+  padding: 0 25px 28px 25px;
 }
 
 .filter li {
   &:not(:last-child) {
-    margin-bottom: 15px;
+    margin-bottom: 11px;
   }
 }
 
 .filter label {
   position: relative;
-  padding-left: 25px;
+  padding-left: 33px;
 
   font-weight: 500;
   font-size: 14px;
@@ -63,24 +110,9 @@
   color: var(--dark);
 }
 
-.filter {
-  input+label::before {
-    content: "";
-    position: absolute;
-    top: 2px;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border: 1px solid var(--gold);
-    border-radius: 0;
-  }
-
-  input:checked+label::before {
-    background-color: var(--gold);
-  }
-}
-
-.filter button {
+.filter button[type="submit"],
+.filter button[type="reset"] {
+  width: 250px;
   height: 68px;
 
   font-weight: 500;
@@ -90,25 +122,50 @@
   background-color: var(--gold);
   border: 1px solid var(--gold);
   cursor: pointer;
+
+  @media (max-width: $tablet) {
+    margin-left: 21px;
+    width: 362px;
+  }
+
+  @media (max-width: $mobile) {
+    width: 230px;
+  }
 }
 
 .filter button[type="submit"] {
-  margin-top: 25px;
-  width: 250px;
-
+  margin-top: 35px;
   color: var(--white);
+
+  &:hover,
+  &:focus {
+    color: var(--dark);
+    background-color: var(--white);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .filter button[type="reset"] {
   margin-top: 25px;
-  width: 250px;
-
   background-color: var(--white);
 
   color: var(--dark);
+
+  &:hover,
+  &:focus {
+    color: var(--white);
+    background-color: var(--gold);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
-.filter__toggle {
+.filter__open {
   display: none;
 
   @media (max-width: $tablet) {
@@ -118,7 +175,77 @@
 
     margin-bottom: 50px;
     width: 100%;
+    height: 68px;
 
     color: var(--white);
+    background-color: var(--gold);
+    border: 1px solid var(--gold);
+    cursor: pointer;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 40px;
+  }
+}
+
+.filter__close {
+  display: none;
+
+  @media (max-width: $tablet) {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+    width: 32px;
+    height: 32px;
+
+    background-color: var(--black);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}
+
+.filter__close svg {
+  color: var(--white);
+}
+
+.filter--nojs {
+  .filter__form {
+    display: block;
+    margin-bottom: 50px;
+
+    @media (max-width: $mobile) {
+      margin-right: auto;
+      margin-left: auto;
+      transform: none;
+    }
+  }
+
+  .filter__open {
+    display: none;
+  }
+
+  fieldset {
+    border: 1px solid var(--gold);
+
+    &:not(:first-child) {
+      border-top: none;
+    }
+  }
+
+  button[type="submit"],
+  button[type="reset"] {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .filter__close {
+    display: none;
   }
 }

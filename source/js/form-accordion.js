@@ -1,15 +1,10 @@
 'use strict';
 //аккордеон
+const accordionForm = document.querySelector('.form-accordion');
+const accordionFormButton = document.querySelectorAll('.form-accordion__button');
+const accordionFormItems = document.querySelectorAll('.form-accordion__item');
 
-if (
-  document.querySelector('.form-accordion') &&
-  document.querySelectorAll('.form-accordion__button') &&
-  document.querySelectorAll('.form-accordion__item')) {
-
-  const accordionForm = document.querySelector('.form-accordion');
-  const accordionFormButton = accordionForm.querySelectorAll('.form-accordion__button');
-  const accordionFormItems = accordionForm.querySelectorAll('.form-accordion__item');
-
+if (accordionForm && accordionFormButton && accordionFormItems) {
   accordionFormItems.forEach(item => {
     item.classList.remove('form-accordion__item--nojs');
   })
@@ -22,9 +17,8 @@ if (
         thisItem.classList.toggle('form-accordion__item--active');
         return;
       }
-      item.classList.remove('form-accordion__item--active');
     });
   }
 
   accordionFormButton.forEach(block => block.addEventListener('click', toggleAccordion));
-}
+};

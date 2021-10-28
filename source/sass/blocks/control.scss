@@ -1,12 +1,12 @@
 .control {
-  margin-top: 30px;
+  margin-top: 4px;
 }
 
 .control__range-wrap {
   position: relative;
-  margin-bottom: 15px;
-  --left-width: 40px;
-  --right-width: 135px;
+  margin-bottom: 13px;
+  --left-width: 42px;
+  --right-width: 146px;
 }
 
 .control__scale {
@@ -61,10 +61,14 @@
 
 .control__price label {
   padding-left: 0;
+
+  &:last-child {
+    margin-left: 45px;
+  }
 }
 
 .control__price input {
-  width: 65px;
+  width: 45px;
   border: none;
 
   &::placeholder {

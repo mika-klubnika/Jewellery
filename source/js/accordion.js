@@ -1,15 +1,10 @@
 'use strict';
 //аккордеон
+const accordion = document.querySelector('.accordion');
+const accordionButton = document.querySelectorAll('.accordion__button');
+const accordionItems = document.querySelectorAll('.accordion__item');
 
-if (
-  document.querySelector('.accordion') &&
-  document.querySelectorAll('.accordion__button') &&
-  document.querySelectorAll('.accordion__item')) {
-
-  const accordion = document.querySelector('.accordion');
-  const accordionButton = accordion.querySelectorAll('.accordion__button');
-  const accordionItems = accordion.querySelectorAll('.accordion__item');
-
+if (accordion && accordionButton && accordionItems) {
   accordionItems.forEach(item => {
     item.classList.remove('accordion__item--nojs');
   })
@@ -27,4 +22,4 @@ if (
   }
 
   accordionButton.forEach(block => block.addEventListener('click', toggleAccordion));
-}
+};

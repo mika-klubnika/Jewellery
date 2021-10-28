@@ -59,4 +59,4 @@ if (modal && modalButton && modalBase && modalClose && form && email && password
       }
     }
   });
-}
+};

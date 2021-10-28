@@ -2,14 +2,21 @@
   display: none;
 }
 
-.form-accordion__item--active .form-accordion__button {
-  padding-bottom: 0;
-}
-
 .form-accordion__item--active .form-accordion__block,
 .form-accordion__item--nojs .form-accordion__block {
   display: flex;
   flex-direction: column;
+  padding: 0 25px 28px 25px;
+}
+
+.form-accordion__item--active .control {
+  margin-top: 4px;
+  padding-bottom: 17px;
+}
+
+.form-accordion__toggle {
+  border: none;
+  background-color: var(--transparent);
 }
 
 .form-accordion__item--active .form-accordion__toggle {

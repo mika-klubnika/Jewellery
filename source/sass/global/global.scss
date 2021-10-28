@@ -25,13 +25,27 @@ ul {
 
 a {
   text-decoration: none;
+  outline: none;
 
   &[href]:hover,
   &[href]:focus {
-    color: var( --gold);
+    color: var(--gold);
   }
 
   &[href]:active {
+    opacity: 0.6;
+  }
+}
+
+button {
+  outline: none;
+
+  &:hover,
+  &:focus {
+    color: var(--gold);
+  }
+
+  &:active {
     opacity: 0.6;
   }
 }

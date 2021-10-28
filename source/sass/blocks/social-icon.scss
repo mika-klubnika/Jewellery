@@ -38,6 +38,15 @@
   @media (max-width: $mobile) {
     display: none;
   }
+
+  &:hover,
+  &:focus {
+    color: var(--gold);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .social-icon__item svg {

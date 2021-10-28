@@ -12,13 +12,13 @@ if (header && toggle && navigation) {
     header.classList.toggle('header--open');
 
     if (header.classList.contains('header--open')) {
-      toggle.setAttribute('aria-label', 'Закрыть меню');
+      toggle.setAttribute('aria-label', 'Close menu');
     } else {
-      toggle.setAttribute('aria-label', 'Открыть меню');
+      toggle.setAttribute('aria-label', 'Open menu');
     }
   });
 
   linkLogin.addEventListener('click', () => {
     header.classList.remove('header--open');
   });
-}
+};

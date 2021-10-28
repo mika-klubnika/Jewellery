@@ -1,19 +1,18 @@
 'use strict';
 //ФИЛЬТР
-// const header = document.querySelector('.header');
+const filter = document.querySelector('.filter');
 const filterForm = document.querySelector('.filter__form');
-const filterToggle = document.querySelector('.filter__toggle');
+const filterOpen = document.querySelector('.filter__open');
+const filterClose = document.querySelector('.filter__close');
 
-if (filterForm && filterToggle) {
-  // header.classList.remove('header--nojs');
+if (filterForm && filterOpen && filterClose) {
+  filter.classList.remove('filter--nojs');
 
-  filterToggle.addEventListener('click', () => {
-    filterForm.classList.toggle('filter__form--open');
+  filterOpen.addEventListener('click', () => {
+    filterForm.classList.add('filter__form--open');
+  })
 
-    if (filterForm.classList.contains('filter__form--open')) {
-      filterToggle.setAttribute('aria-label', 'Закрыть меню');
-    } else {
-      filterToggle.setAttribute('aria-label', 'Открыть меню');
-    }
-  });
-}
+  filterClose.addEventListener('click', () => {
+    filterForm.classList.remove('filter__form--open');
+  })
+};

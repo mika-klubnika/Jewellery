@@ -25,7 +25,7 @@
   width: 270px;
   height: 272px;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $min-desktop) {
     width: 206px;
     height: 208px;
   }

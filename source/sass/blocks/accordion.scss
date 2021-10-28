@@ -59,6 +59,11 @@
   padding: 0;
   border: none;
   background-color: var(--transparent);
+
+  &:hover,
+  &:focus {
+    outline: 1px solid var(--gold);
+  }
 }
 
 .accordion__toggle svg {
