@@ -1049,6 +1049,9 @@ p {
     left: 0; }
   .slider__button--next {
     right: 0; }
+  @media (max-width: 767px) {
+    .slider__button {
+      display: none; } }
   .slider__button:hover, .slider__button:focus {
     outline: 1px solid var(--gold); }
 
