@@ -1,0 +1,26 @@
+.swiper-pagination-bullet {
+  padding: 7px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: var(--gray);
+
+  border: none;
+  background-color: var(--transparent);
+
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  color: var(--dark);
+}
+
+.swiper-mobile-pagination__button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: var(--dark);
+}

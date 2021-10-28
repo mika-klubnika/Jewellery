@@ -6,11 +6,11 @@
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: flex-start;
+  width: 1200px;
   overflow: hidden;
 
   @media (max-width: $min-desktop) {
-    width: 870px;
+    width: 950px;
   }
 
   @media (max-width: $tablet) {
@@ -48,7 +48,7 @@
   }
 
   @media (max-width: $mobile) {
-    display: none;
+    // display: none;
   }
 
   &:hover,
@@ -81,26 +81,61 @@
   left: 0;
 
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  margin-left: -15px;
-  margin-right: -15px;
-  width: 500%;
+  width: 100%;
+  height: 100%;
 }
 
 .slider__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-shrink: 0;
+
   padding-left: 15px;
   padding-right: 15px;
 
   width: 100%;
-  flex: 0 0 300px;
+  height: 100%;
+}
+
+.slider__item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 270px;
+}
+
+.slider__pagination {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 43px;
 
   @media (max-width: $tablet) {
-    flex: 0 0 354px;
+    margin-top: 34px;
   }
 
-  @media (max-width: $mobile) {
-    flex: 0 0 160px;
+  &--desktop {
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
+
+  &--mobile {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: flex;
+      align-items: center;
+      margin-top: 22px;
+    }
+  }
+}
+
+.slider__pagination-button {
+  padding: 0;
+  border: none;
+  background-color: var(--transparent);
 }
