@@ -110,8 +110,8 @@
   color: var(--dark);
 }
 
-.filter button[type="submit"],
-.filter button[type="reset"] {
+.filter__submit,
+.filter__reset {
   width: 250px;
   height: 68px;
 
@@ -133,7 +133,7 @@
   }
 }
 
-.filter button[type="submit"] {
+.filter__submit {
   margin-top: 35px;
   color: var(--white);
 
@@ -148,7 +148,7 @@
   }
 }
 
-.filter button[type="reset"] {
+.filter__reset {
   margin-top: 25px;
   background-color: var(--white);
 
@@ -239,8 +239,8 @@
     }
   }
 
-  button[type="submit"],
-  button[type="reset"] {
+  .filter__submit,
+  .filter__reset {
     margin-left: 0;
     width: 100%;
   }

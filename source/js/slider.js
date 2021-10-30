@@ -86,6 +86,7 @@ if (document.querySelector('.swiper-pagination') &&
 
       renderMobilePagination(bullets);
       changeBreakpoint(bullets);
+      swiper.on('breakpoint', changeBreakpoint);
     }
   }
 

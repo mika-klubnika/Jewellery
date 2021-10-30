@@ -209,6 +209,7 @@ exports.default = gulp.series(
     vendor,
     sprite,
     images,
+    createWebp,
   ),
   gulp.series(
     server,

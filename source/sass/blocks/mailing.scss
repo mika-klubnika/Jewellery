@@ -1,13 +1,7 @@
 .mailing {
-  grid-column: 1/2;
-
   @media (max-width: $tablet) {
-    grid-column: 1/3;
+    grid-column: 1/-1;
     grid-row: 1/2;
-  }
-
-  @media (max-width: $mobile) {
-    grid-column: 1/2;
   }
 }
 
@@ -46,6 +40,14 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid var(--white);
+
+  @media (max-width: $tablet) {
+    margin-right: 10px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-right: 0;
+  }
 }
 
 .mailing label {
@@ -88,14 +90,6 @@
   background-color: var(--transparent);
   cursor: pointer;
 
-  @media (max-width: $tablet) {
-    margin-right: 10px;
-  }
-
-  @media (max-width: $mobile) {
-    margin-right: 0;
-  }
-
   &:hover,
   &:focus {
     color: var(--gold);
@@ -113,4 +107,14 @@
 .mailing svg {
   transform: rotate(180deg);
   stroke: var(--white);
+}
+
+
+.mailing button:hover svg,
+.mailing button:focus svg {
+  stroke: var(--gold);
+}
+
+.mailing button:active svg {
+  opacity: 0.6;
 }

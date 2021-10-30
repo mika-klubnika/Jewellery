@@ -3,7 +3,7 @@
 const header = document.querySelector('.header');
 const navigation = header.querySelector('.navigation');
 const toggle = header.querySelector('.header__toggle');
-const linkLogin = header.querySelector('.header__login');
+const linkLogins = header.querySelectorAll('.header__login');
 
 if (header && toggle && navigation) {
   header.classList.remove('header--nojs');
@@ -18,7 +18,15 @@ if (header && toggle && navigation) {
     }
   });
 
-  linkLogin.addEventListener('click', () => {
-    header.classList.remove('header--open');
-  });
+  linkLogins.forEach(linkLogin => {
+    linkLogin.addEventListener('click', () => {
+      header.classList.remove('header--open');
+    });
+  })
+
+  window.addEventListener('resize', (evt) => {
+    if(evt.currentTarget.innerWidth >= 1023) {
+      header.classList.remove('header--open');
+    }
+  })
 };

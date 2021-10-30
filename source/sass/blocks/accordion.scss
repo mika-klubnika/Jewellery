@@ -1,6 +1,6 @@
 .accordion {
-  padding-right: 100px;
-  padding-left: 100px;
+  margin: 0 auto;
+  max-width: 970px;
   width: 100%;
 
   color: var(--dark);
@@ -29,7 +29,7 @@
 
   @media (max-width: $tablet) {
     padding-left: 50px;
-    padding-right: 50px;
+    padding-right: 45px;
   }
 
   @media (max-width: $mobile) {
@@ -43,16 +43,13 @@
   line-height: 130%;
 
   @media (max-width: $mobile) {
+    margin-right: 5px;
     font-size: 16px;
     line-height: 140%;
   }
 }
 
 .accordion__toggle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   width: 30px;
   height: 20px;
 
@@ -71,13 +68,13 @@
   height: 8px;
 
   @media (max-width: $tablet) {
-    width: 23px;
-    height: 12px;
+    width: 30px;
+    height: 15px;
   }
 
   @media (max-width: $mobile) {
-    width: 20px;
-    height: 10px;
+    width: 23px;
+    height: 20px;
   }
 }
 

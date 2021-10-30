@@ -47,8 +47,9 @@
   }
 }
 
-.section p {
-  margin-bottom: 60px;
+.section__link {
+  display: inline-block;
+  margin-bottom: 30px;
   padding-bottom: 5px;
 
   font-family: var(--poppins);
@@ -56,9 +57,14 @@
   font-size: 16px;
   line-height: 130%;
 
+  color: var(--dark);
   border-bottom: 1px solid var(--gold);
 
   @media (max-width: $tablet) {
-    margin-bottom: 55px;
+    // margin-bottom: 55px;
   }
+}
+
+.section__content {
+  padding-top: 30px;
 }

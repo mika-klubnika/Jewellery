@@ -1,7 +1,5 @@
 .new {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 
   padding-top: 120px;
   padding-bottom: 60px;
@@ -16,10 +14,6 @@
   }
 }
 
-.new p {
-  padding: 0;
-
-  @media (max-width: $mobile) {
-    margin-bottom: 45px;
-  }
+.new__link {
+  padding-bottom: 0;
 }

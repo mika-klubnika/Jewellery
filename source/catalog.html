@@ -38,7 +38,7 @@
         <input type="search" name="search" id="search" placeholder="Type here to search">
       </form>
 
-      <a class="header__logo" href="index.html" aria-label="Jewellery logo">
+      <a href="index.html" class="header__logo" aria-label="Jewellery logo">
         <svg width="66" height="66">
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
@@ -52,11 +52,12 @@
           <use xlink:href="img/sprite.svg#cart"></use>
         </svg>
       </button>
-
-      <nav class="navigation">
+    </div>
+    <nav class="navigation">
+      <div class="container">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#">What’s new</a>
+            <a href="catalog.html">What’s new</a>
           </li>
           <li class="navigation__item">
             <a href="#">Chokers</a>
@@ -83,17 +84,19 @@
             <a href="#">Contact Us</a>
           </li>
         </ul>
-      </nav>
-    </div>
+        <a class="header__login navigation__login" href="login.html">Login</a>
+      </div>
+    </nav>
+
   </header>
 
   <main>
-    <section class="catalog">
+    <section class="catalog-title">
       <h2>ALL JEWELLERY</h2>
       <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
     </section>
 
-    <section class="catalog__wrapper container">
+    <section class="catalog container">
       <aside class="catalog__filter filter filter--nojs">
         <button class="filter__open" type="button" aria-label="Open filter">Filter</button>
 
@@ -200,8 +203,8 @@
             </div>
           </fieldset>
 
-          <button type="submit">Apply</button>
-          <button type="reset">Clear All</button>
+          <button class="filter__submit" type="submit">Apply</button>
+          <button class="filter__reset" type="reset">Clear All</button>
           <button class="filter__close" type="button" aria-label="Close filter">
             <svg width="14" height="14">
               <use xlink:href="img/sprite.svg#close"></use>
@@ -224,10 +227,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Double pearl earrings </h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">115</span>
+                <h3>Double pearl earrings </h3>
+                <b>
+                  <i>$</i>
+                  <span>115</span>
                 </b>
               </div>
             </a>
@@ -244,10 +247,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Choker with gold bead</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">55</span>
+                <h3>Choker with gold bead</h3>
+                <b>
+                  <i>$</i>
+                  <span>55</span>
                 </b>
               </div>
             </a>
@@ -264,10 +267,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Gold layered necklace</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">155</span>
+                <h3>Gold layered necklace</h3>
+                <b>
+                  <i>$</i>
+                  <span>155</span>
                 </b>
               </div>
             </a>
@@ -284,10 +287,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Blue gemstone pendant</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">105</span>
+                <h3>Blue gemstone pendant</h3>
+                <b>
+                  <i>$</i>
+                  <span>105</span>
                 </b>
               </div>
             </a>
@@ -303,10 +306,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Boho earrings</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">75</span>
+                <h3>Boho earrings</h3>
+                <b>
+                  <i>$</i>
+                  <span>75</span>
                 </b>
               </div>
             </a>
@@ -322,10 +325,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Gold bird necklace</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">135</span>
+                <h3>Gold bird necklace</h3>
+                <b>
+                  <i>$</i>
+                  <span>135</span>
                 </b>
               </div>
             </a>
@@ -342,10 +345,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Black leather choker</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">85</span>
+                <h3>Black leather choker</h3>
+                <b>
+                  <i>$</i>
+                  <span>85</span>
                 </b>
               </div>
             </a>
@@ -362,10 +365,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Necklace with amethyst</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">145</span>
+                <h3>Necklace with amethyst</h3>
+                <b>
+                  <i>$</i>
+                  <span>145</span>
                 </b>
               </div>
             </a>
@@ -381,10 +384,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Elephant earrings</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">95</span>
+                <h3>Elephant earrings</h3>
+                <b>
+                  <i>$</i>
+                  <span>95</span>
                 </b>
               </div>
             </a>
@@ -401,10 +404,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Threader necklace</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">115</span>
+                <h3>Threader necklace</h3>
+                <b>
+                  <i>$</i>
+                  <span>115</span>
                 </b>
               </div>
             </a>
@@ -421,10 +424,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Origami crane necklace</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">105</span>
+                <h3>Origami crane necklace</h3>
+                <b>
+                  <i>$</i>
+                  <span>105</span>
                 </b>
               </div>
             </a>
@@ -440,10 +443,10 @@
                 </picture>
               </div>
               <div class="product__description">
-                <h3 class="product__title">Marble earrings</h3>
-                <b class="product__price">
-                  <i class="product__dollar">$</i>
-                  <span class="product__price-value">95</span>
+                <h3>Marble earrings</h3>
+                <b>
+                  <i>$</i>
+                  <span>95</span>
                 </b>
               </div>
             </a>
@@ -515,7 +518,7 @@
 
       <ul class="social-icon">
         <li class="social-icon__item">
-          <a href="#">
+          <a class="social-icon__link" href="#">
             <svg width="15" height="15">
               <use xlink:href="img/sprite.svg#facebook"></use>
             </svg>
@@ -523,7 +526,7 @@
           </a>
         </li>
         <li class="social-icon__item">
-          <a href="#">
+          <a class="social-icon__link" href="#">
             <svg width="15" height="15">
               <use xlink:href="img/sprite.svg#instagram"></use>
             </svg>
@@ -531,7 +534,7 @@
           </a>
         </li>
         <li class="social-icon__item">
-          <a href="#">
+          <a class="social-icon__link" href="#">
             <svg width="16" height="15">
               <use xlink:href="img/sprite.svg#pinterest"></use>
             </svg>
@@ -539,7 +542,7 @@
           </a>
         </li>
         <li class="social-icon__item">
-          <a href="#">
+          <a class="social-icon__link" href="#">
             <svg width="15" height="13">
               <use xlink:href="img/sprite.svg#twitter"></use>
             </svg>
@@ -571,7 +574,7 @@
             <input type="password" name="login-password" id="password" placeholder="Password" required>
           </label>
           <a href="#">Forgot your password?</a>
-          <button type="submit">Log In</button>
+          <button class="login__submit" type="submit">Log In</button>
           <div class="login__account">
             <p>Don’t have an account?&nbsp;<a href="#">Sign up</a></p>
           </div>

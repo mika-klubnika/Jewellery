@@ -3,8 +3,6 @@
 }
 
 .product__image img {
-  display: flex;
-
   width: 270px;
   height: 284px;
 
@@ -46,7 +44,7 @@
   }
 }
 
-.product__title {
+.product__description h3 {
   margin-bottom: 7px;
 
   font-weight: 500;
@@ -54,13 +52,13 @@
   line-height: 130%;
 }
 
-.product__price {
+.product__description b {
   font-weight: bold;
   font-size: 14px;
   line-height: 130%;
 }
 
-.product__dollar {
+.product__description i {
   margin-right: 2px;
   font-style: normal;
 }

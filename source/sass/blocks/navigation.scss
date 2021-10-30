@@ -1,14 +1,14 @@
 .navigation {
-  grid-row: 2/3;
-  grid-column: 1/-1;
-
   padding-top: 17px;
 
+  border-top: 1px solid var(--light);
+
   @media (max-width: $tablet) {
-    grid-row: 3/4;
     display: none;
 
     padding-top: 112px;
+
+    border-top: none;
   }
 
   @media (max-width: $mobile) {
@@ -80,6 +80,10 @@
   opacity: 0.75;
 }
 
+.navigation__login {
+  display: none;
+}
+
 .header--open,
 .header--nojs {
   .navigation {
@@ -95,5 +99,9 @@
     &:active {
       opacity: 0.3;
     }
+  }
+
+  .navigation__login {
+    display: flex;
   }
 }
