@@ -38,26 +38,28 @@
         <input type="search" name="search" id="search" placeholder="Type here to search">
       </form>
 
-      <a href="index.html" class="header__logo" aria-label="Jewellery logo">
+      <a class="header__logo" href="index.html" aria-label="Jewellery logo">
         <svg width="66" height="66">
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
       </a>
 
-      <a class="header__login" href="login.html">Login</a>
+      <div class="header__user-menu">
+        <a class="header__login" href="login.html">Login</a>
 
-      <button class="header__cart">
-        <span>Cart 0</span>
-        <svg width="20" height="18">
-          <use xlink:href="img/sprite.svg#cart"></use>
-        </svg>
-      </button>
+        <button class="header__cart">
+          <span>Cart 0</span>
+          <svg width="20" height="18">
+            <use xlink:href="img/sprite.svg#cart"></use>
+          </svg>
+        </button>
+      </div>
     </div>
     <nav class="navigation">
       <div class="container">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="catalog.html">What’s new</a>
+            <a>What’s new</a>
           </li>
           <li class="navigation__item">
             <a href="#">Chokers</a>
