@@ -471,6 +471,9 @@ p {
 
 .section__content {
   padding-top: 30px; }
+  @media (max-width: 1023px) {
+    .section__content {
+      justify-content: center; } }
 
 .header {
   position: relative;
