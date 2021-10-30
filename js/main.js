@@ -71,7 +71,7 @@ if (accordionForm && accordionFormButton && accordionFormItems) {
 'use strict';
 
 const modal = document.querySelector('.login');
-const modalButton = document.querySelector('.header__login');
+const modalButtons = document.querySelectorAll('.header__login');
 const modalBase = modal.querySelector('.login__base');
 const modalClose = modal.querySelector('.login__close');
 
@@ -82,28 +82,30 @@ const password = modal.querySelector('#password');
 const isStorageSupport = true;
 const storage = {};
 
-if (modal && modalButton && modalBase && modalClose && form && email && password) {
+if (modal && modalButtons && modalBase && modalClose && form && email && password) {
   try {
     storage.email = localStorage.getItem('email');
   } catch (err) {
     isStorageSupport = false;
   }
 
-  modalButton.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    modal.classList.add('login--open');
-    document.body.classList.add('hidden');
+  modalButtons.forEach(modalButton => {
+    modalButton.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      modal.classList.add('login--open');
+      document.body.classList.add('hidden');
 
-    if (storage.name) {
-      email.value = storage.email;
-      password.focus();
-    } else {
-      email.focus();
-    }
-  });
+      if (storage.name) {
+        email.value = storage.email;
+        password.focus();
+      } else {
+        email.focus();
+      }
+    });
+  })
 
   modalBase.addEventListener('click', (evt) => {
-    if(evt.target === modalBase) {
+    if (evt.target === modalBase) {
       modal.classList.remove('login--open')
       document.body.classList.remove('hidden');
     }
@@ -136,7 +138,7 @@ if (modal && modalButton && modalBase && modalClose && form && email && password
 const header = document.querySelector('.header');
 const navigation = header.querySelector('.navigation');
 const toggle = header.querySelector('.header__toggle');
-const linkLogin = header.querySelector('.header__login');
+const linkLogins = header.querySelectorAll('.header__login');
 
 if (header && toggle && navigation) {
   header.classList.remove('header--nojs');
@@ -151,9 +153,17 @@ if (header && toggle && navigation) {
     }
   });
 
-  linkLogin.addEventListener('click', () => {
-    header.classList.remove('header--open');
-  });
+  linkLogins.forEach(linkLogin => {
+    linkLogin.addEventListener('click', () => {
+      header.classList.remove('header--open');
+    });
+  })
+
+  window.addEventListener('resize', (evt) => {
+    if(evt.currentTarget.innerWidth >= 1023) {
+      header.classList.remove('header--open');
+    }
+  })
 };
 
 if (document.querySelector('.swiper-pagination') &&
@@ -244,6 +254,7 @@ if (document.querySelector('.swiper-pagination') &&
 
       renderMobilePagination(bullets);
       changeBreakpoint(bullets);
+      swiper.on('breakpoint', changeBreakpoint);
     }
   }
 
