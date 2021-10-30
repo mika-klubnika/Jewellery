@@ -59,12 +59,12 @@
 
   color: var(--dark);
   border-bottom: 1px solid var(--gold);
-
-  @media (max-width: $tablet) {
-    // margin-bottom: 55px;
-  }
 }
 
 .section__content {
   padding-top: 30px;
+
+  @media (max-width: $tablet) {
+    justify-content: center;
+  }
 }
