@@ -995,6 +995,8 @@ p {
 .slider__wrapper {
   z-index: 1;
   display: flex;
+  margin-left: auto;
+  margin-right: auto;
   width: 1200px;
   overflow: hidden; }
   @media (max-width: 1199px) {
