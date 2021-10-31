@@ -14,6 +14,7 @@ if (document.querySelector('.swiper-pagination') &&
     swiper = new Swiper(".swiper", {
       loop: true,
       slidesPerGroup: 4,
+      spaceBetween: 30,
       slidesPerView: 4,
       centeredSlides: false,
       centeredSlidesBounds: true,
