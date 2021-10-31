@@ -1068,8 +1068,6 @@ p {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  padding-left: 15px;
-  padding-right: 15px;
   width: 100%;
   height: 100%; }
 
@@ -1078,6 +1076,12 @@ p {
   flex-direction: column;
   align-items: center;
   width: 270px; }
+  @media (max-width: 1023px) {
+    .slider__item a {
+      width: 324px; } }
+  @media (max-width: 767px) {
+    .slider__item a {
+      width: 130px; } }
 
 .slider__pagination {
   display: flex;
