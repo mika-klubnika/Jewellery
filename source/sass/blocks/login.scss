@@ -196,6 +196,15 @@
     top: 9px;
     right: 6px;
   }
+
+  &:hover,
+  &:focus {
+    outline: 1px solid var(--dark);
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .login__close svg {

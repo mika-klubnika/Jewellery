@@ -1769,7 +1769,8 @@ p {
   font-weight: 500;
   font-size: 14px;
   line-height: 130%;
-  color: var(--dark); }
+  color: var(--dark);
+  cursor: pointer; }
 
 .filter__submit,
 .filter__reset {
@@ -2111,6 +2112,10 @@ p {
     .login__close {
       top: 9px;
       right: 6px; } }
+  .login__close:hover, .login__close:focus {
+    outline: 1px solid var(--dark); }
+  .login__close:active {
+    opacity: 0.6; }
 
 .login__close svg {
   color: var(--dark); }

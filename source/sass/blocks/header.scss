@@ -246,12 +246,10 @@
   }
 }
 
-.header--nojs {
-  .header__toggle {
-    display: none;
-  }
+.header--nojs .header__toggle {
+  display: none;
+}
 
-  .header__wrapper {
-    grid-template-columns: 1fr max-content;
-  }
+.header--nojs .header__wrapper {
+  grid-template-columns: 1fr max-content;
 }
