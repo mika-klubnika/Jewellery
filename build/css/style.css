@@ -2087,3 +2087,12 @@ p {
   width: 66px;
   height: 66px;
   color: var(--gold); }
+
+.login-form {
+  display: flex;
+  justify-content: center; }
+
+.login-form__wrap {
+  position: static;
+  margin-top: 50px;
+  transform: none; }
