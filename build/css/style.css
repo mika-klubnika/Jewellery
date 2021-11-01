@@ -664,6 +664,9 @@ p {
 .header--nojs .header__toggle {
   display: none; }
 
+.header--nojs .header__wrapper {
+  grid-template-columns: 1fr max-content; }
+
 .navigation {
   padding-top: 17px;
   border-top: 1px solid var(--light); }
@@ -1559,7 +1562,7 @@ p {
   transform: rotate(180deg); }
 
 .accordion__item--nojs .accordion__toggle {
-  background-image: none; }
+  display: none; }
 
 .catalog-title {
   display: flex;
@@ -1957,7 +1960,7 @@ p {
   transform: rotate(180deg); }
 
 .form-accordion__item--nojs .form-accordion__toggle {
-  background-image: none; }
+  display: none; }
 
 .login {
   display: none; }
