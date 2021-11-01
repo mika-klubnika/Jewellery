@@ -95,6 +95,7 @@
     &:hover,
     &:focus {
       opacity: 0.6;
+      color: var(--white);
     }
 
     &:active {
@@ -104,5 +105,15 @@
 
   .navigation__login {
     display: flex;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+      color: var(--white);
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
