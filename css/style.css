@@ -1148,6 +1148,12 @@ p {
   line-height: 130%;
   color: var(--dark); }
 
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 0.35;
+  cursor: auto;
+  pointer-events: none; }
+
 .product {
   color: var(--dark); }
 
