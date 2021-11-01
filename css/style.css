@@ -736,7 +736,8 @@ p {
 .header--open .navigation__item a:hover, .header--open .navigation__item a:focus,
 .header--nojs .navigation__item a:hover,
 .header--nojs .navigation__item a:focus {
-  opacity: 0.6; }
+  opacity: 0.6;
+  color: var(--white); }
 
 .header--open .navigation__item a:active,
 .header--nojs .navigation__item a:active {
@@ -745,6 +746,14 @@ p {
 .header--open .navigation__login,
 .header--nojs .navigation__login {
   display: flex; }
+  .header--open .navigation__login:hover, .header--open .navigation__login:focus,
+  .header--nojs .navigation__login:hover,
+  .header--nojs .navigation__login:focus {
+    opacity: 0.6;
+    color: var(--white); }
+  .header--open .navigation__login:active,
+  .header--nojs .navigation__login:active {
+    opacity: 0.3; }
 
 .footer {
   padding-top: 90px;
