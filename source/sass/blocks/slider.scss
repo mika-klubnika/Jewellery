@@ -3,7 +3,7 @@
   padding-top: 30px;
 
   @media (max-width: $tablet) {
-    padding-top: 20px;
+    padding-top: 25px;
   }
 
   @media (max-width: $mobile) {
@@ -17,7 +17,7 @@
 
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
+  width: 1170px;
 
   overflow: hidden;
 
@@ -52,19 +52,11 @@
   cursor: pointer;
 
   &--prev {
-    left: 15px;
-
-    @media (max-width: $tablet) {
-      left: 0;
-    }
+    left: 0;
   }
 
   &--next {
-    right: 15px;
-
-    @media (max-width: $tablet) {
-      right: 0;
-    }
+    right: 0;
   }
 
   @media (max-width: $tablet) {

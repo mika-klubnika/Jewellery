@@ -35,15 +35,6 @@
   @media (max-width: $mobile) {
     display: none;
   }
-
-  &:hover,
-  &:focus {
-    color: var(--gold);
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
 }
 
 .social-icon__link svg {
@@ -56,6 +47,9 @@
   }
 }
 
-.social-icon__link:hover svg {
+.social-icon__link:hover span,
+.social-icon__link:focus span,
+.social-icon__link:hover svg,
+.social-icon__link:focus svg {
   color: var(--gold);
 }

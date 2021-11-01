@@ -19,8 +19,9 @@
 .navigation__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 
-  padding-left: 45px;
+  padding-left: 55px;
 
   @media (max-width: $tablet) {
     flex-direction: column;

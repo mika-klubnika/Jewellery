@@ -17,6 +17,12 @@
 .form-accordion__toggle {
   border: none;
   background-color: var(--transparent);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: 1px solid var(--gold);
+  }
 }
 
 .form-accordion__item--active .form-accordion__toggle {

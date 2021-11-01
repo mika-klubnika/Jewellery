@@ -16,4 +16,8 @@
 
 .new__link {
   padding-bottom: 0;
+
+  @media (max-width: $mobile) {
+    padding-bottom: 5px;
+  }
 }

@@ -4,6 +4,15 @@
   padding-top: 30px;
   padding-bottom: 20px;
 
+  @media (max-width: $tablet) {
+    padding-bottom: 25px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+
   &--open {
     @media (max-width: $tablet) {
       position: fixed;
@@ -27,8 +36,8 @@
 }
 
 .header__wrapper {
-  display: grid;
-  grid-template-columns: max-content 1fr max-content;
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 15px;
 
   @media (max-width: $tablet) {
@@ -61,10 +70,14 @@
 }
 
 .header form {
+  display: flex;
+
   padding-top: 2px;
+  width: 100%;
 
   @media (max-width: $tablet) {
     position: relative;
+
     grid-row: 2/3;
     grid-column: 1/-1;
 
@@ -78,19 +91,20 @@
 }
 
 .header label {
-  margin-right: 10px;
+  margin-top: 13px;
+  margin-right: 13px;
   fill: var(--dark);
 
   @media (max-width: $tablet) {
     position: absolute;
-    top: 14px;
+    top: 2px;
     left: 12px;
     fill: var(--white);
   }
 }
 
 .header input {
-  width: 350px;
+  width: 65%;
   height: 40px;
 
   border: none;
@@ -117,11 +131,6 @@
 
 .header__logo {
   justify-self: center;
-  margin-right: 220px;
-
-  @media (max-width: $tablet) {
-    margin: 0;
-  }
 }
 
 .header__logo svg {
@@ -132,6 +141,17 @@
   @media (max-width: $mobile) {
     width: 52px;
     height: 52px;
+  }
+}
+
+.header__user-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+
+  @media (max-width: $tablet) {
+    width: auto;
   }
 }
 
@@ -203,6 +223,8 @@
 .header--nojs {
   @media (max-width: $tablet) {
     .header__wrapper {
+      display: grid;
+      grid-template-columns: max-content 1fr max-content;
       grid-template-rows: auto auto;
     }
 

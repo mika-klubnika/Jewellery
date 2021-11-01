@@ -16,11 +16,13 @@
     background-color: var(--gold);
   }
 
-  input:not(:disabled):hover + label::before {
-    border: 1px solid var(--dark);
+  input:not(:disabled):hover + label::before,
+  input:not(:disabled):focus + label::before {
+    border: 1px solid var(--black);
   }
 
-  input:not(:disabled):hover + label {
+  input:not(:disabled):hover + label,
+  input:not(:disabled):focus + label {
     color: var(--gold);
   }
 }
@@ -76,7 +78,7 @@
   display: flex;
   justify-content: space-between;
 
-  padding: 24px 22px 22px 22px;
+  padding: 24px 16px 22px 23px;
 
   @media (max-width: $tablet) {
     padding: 40px 40px 40px 21px;
@@ -134,7 +136,7 @@
 }
 
 .filter__submit {
-  margin-top: 35px;
+  margin-top: 32px;
   color: var(--white);
 
   &:hover,

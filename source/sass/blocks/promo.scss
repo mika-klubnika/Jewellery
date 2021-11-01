@@ -37,12 +37,14 @@
 }
 
 .promo p {
-  margin-right: 18px;
-
   font-weight: bold;
   font-size: 45px;
   line-height: 130%;
   letter-spacing: 0.03em;
+
+  @media (max-width: $tablet) {
+    margin-right: 18px;
+  }
 
   @media (max-width: $mobile) {
     margin-right: 0;
@@ -51,11 +53,13 @@
 }
 
 .promo span {
-  margin-right: 18px;
-
   font-style: italic;
   font-size: 38px;
   line-height: 130%;
+
+  @media (max-width: $tablet) {
+    margin-right: 18px;
+  }
 
   @media (max-width: $mobile) {
     margin-right: 0;

@@ -49,6 +49,7 @@
     row-gap: 34px;
     grid-template-columns: 170px 305px 170px 170px;
     column-gap: 16px;
+    justify-content: center;
   }
 
   @media (max-width: $tablet) {
