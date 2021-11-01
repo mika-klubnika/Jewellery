@@ -64,7 +64,7 @@
 .section__content {
   padding-top: 30px;
 
-  @media (max-width: $tablet) {
+  @media (max-width: $min-desktop) {
     justify-content: center;
   }
 }

@@ -471,7 +471,7 @@ p {
 
 .section__content {
   padding-top: 30px; }
-  @media (max-width: 1023px) {
+  @media (max-width: 1199px) {
     .section__content {
       justify-content: center; } }
 
@@ -1235,8 +1235,7 @@ p {
       grid-template-rows: 170px 110px;
       row-gap: 34px;
       grid-template-columns: 170px 305px 170px 170px;
-      column-gap: 16px;
-      justify-content: center; } }
+      column-gap: 16px; } }
   @media (max-width: 1023px) {
     .gallery__list {
       grid-template-rows: 133px 87px;
