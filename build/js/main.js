@@ -145,6 +145,7 @@ if (header && toggle && navigation) {
 
   toggle.addEventListener('click', () => {
     header.classList.toggle('header--open');
+    document.body.classList.toggle('hidden');
 
     if (header.classList.contains('header--open')) {
       toggle.setAttribute('aria-label', 'Close menu');
@@ -203,17 +204,21 @@ if (document.querySelector('.swiper-pagination') &&
           slidesPerView: 2,
           slidesPerGroup: 2,
         },
-        1023: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-        },
-        1169: {
+        1022: {
           slidesPerView: 4,
           slidesPerGroup: 4,
         },
       },
     });
   };
+
+  const getBullets = () => {
+    return bullets = paginationBlock.children;
+  }
+
+  const setMobileTotalBullet = (bullets) => {
+    return totalBullets = bullets.length;
+  }
 
   const getCurrentBullet = (bullets) => {
     let currentBullet;
@@ -227,7 +232,7 @@ if (document.querySelector('.swiper-pagination') &&
   }
 
   const renderMobilePagination = (bullets) => {
-    total.textContent = bullets.length;
+    total.textContent = setMobileTotalBullet(bullets);
     current.textContent = getCurrentBullet(bullets);
   }
 
@@ -235,6 +240,11 @@ if (document.querySelector('.swiper-pagination') &&
     swiper.on('transitionEnd', () => {
       renderMobilePagination(bullets);
     });
+  }
+
+  const setMobilePagination = () => {
+    let bullets = getBullets();
+    setMobilePagination(bullets);
   }
 
   const changeBreakpoint = (bullets) => {
@@ -245,14 +255,17 @@ if (document.querySelector('.swiper-pagination') &&
     }
   }
 
+  const initMobilePagination = () => {
+    let bullets = getBullets();
+    renderMobilePagination(bullets);
+  }
+
   const initSlider = () => {
     initSwiper();
 
     if (swiper && swiperPaginationBlock && current && total) {
-      let bullets = swiperPaginationBlock.children;
-
-      renderMobilePagination(bullets);
-      changeBreakpoint(bullets);
+      initMobilePagination();
+      changeBreakpoint();
       swiper.on('breakpoint', changeBreakpoint);
     }
   }

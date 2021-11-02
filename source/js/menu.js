@@ -10,6 +10,7 @@ if (header && toggle && navigation) {
 
   toggle.addEventListener('click', () => {
     header.classList.toggle('header--open');
+    document.body.classList.toggle('hidden');
 
     if (header.classList.contains('header--open')) {
       toggle.setAttribute('aria-label', 'Close menu');

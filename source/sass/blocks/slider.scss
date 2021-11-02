@@ -3,7 +3,7 @@
   padding-top: 30px;
 
   @media (max-width: $tablet) {
-    padding-top: 25px;
+    padding-top: 19px;
   }
 
   @media (max-width: $mobile) {
@@ -21,19 +21,20 @@
 
   overflow: hidden;
 
-  @media (max-width: $min-desktop) {
+  @media (max-width: $mid-desktop) {
     width: 950px;
   }
 
-  @media (max-width: $tablet) {
+  @media (max-width: $tablet - 1px) {
     width: 678px;
   }
 
-  @media (max-width: $mobile) {
-    width: 450px;
-  }
+  // @media (max-width: $min-tablet) {
+  //   width: 450px;
+  //   width: 678px;
+  // }
 
-  @media (max-width: $mid-mobile) {
+  @media (max-width: $min-tablet) {
     width: 290px;
   }
 }
@@ -57,10 +58,6 @@
 
   &--next {
     right: 0;
-  }
-
-  @media (max-width: $tablet) {
-    top: -89px;
   }
 
   @media (max-width: $mobile) {
@@ -128,7 +125,7 @@
     width: 324px;
   }
 
-  @media (max-width: $mobile) {
+  @media (max-width: $mid-mobile) {
     width: 130px;
   }
 }

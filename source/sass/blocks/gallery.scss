@@ -7,7 +7,7 @@
   color: var(--dark);
 
   @media (max-width: $tablet) {
-    padding-top: 22px;
+    padding-top: 20px;
     padding-bottom: 80px;
   }
 
@@ -44,7 +44,7 @@
   grid-template-columns: 230px 399px 230px 230px;
   column-gap: 27px;
 
-  @media (max-width: $min-desktop) {
+  @media (max-width: $mid-desktop) {
     grid-template-rows: 170px 110px;
     row-gap: 34px;
     grid-template-columns: 170px 305px 170px 170px;
@@ -55,7 +55,7 @@
     grid-template-rows: 133px 87px;
     row-gap: 20px;
     grid-template-columns: 133px 231px 133px 133px;
-    padding-top: 25px;
+    padding-top: 30px;
   }
 
   @media (max-width: $mobile) {

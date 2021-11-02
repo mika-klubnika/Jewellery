@@ -8,12 +8,16 @@
 
   background-color: var(--gold-light-03);
 
-  @media (max-width: $tablet) {
+  @media (max-width: $mid-desktop) {
+    height: 208px;
+  }
+
+  @media (max-width: $tablet - 1px) {
     width: 324px;
     height: 340px;
   }
 
-  @media (max-width: $mobile) {
+  @media (max-width: $min-tablet) {
     width: 130px;
     height: 136px;
   }
@@ -24,6 +28,11 @@
   height: 272px;
 
   @media (max-width: $min-desktop) {
+    width: 230px;
+    height: 225px;
+  }
+
+  @media (max-width: $max-tablet) {
     width: 206px;
     height: 208px;
   }

@@ -5,7 +5,11 @@
   background-color: var(--black);
 
   @media (max-width: $tablet) {
-    padding-top: 52px;
+    padding-top: 49px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-top: 51px;
   }
 }
 
@@ -15,8 +19,8 @@
   column-gap: 20px;
   justify-content: space-between;
 
-  @media (max-width: $min-desktop) {
-    grid-template-columns: 1fr max-content max-content;
+  @media (max-width: $mid-desktop) {
+    grid-template-columns: 465px max-content max-content;
   }
 
   @media (max-width: $tablet) {
@@ -37,6 +41,7 @@
 .footer__nav {
   display: flex;
   padding-top: 5px;
+  min-width: 370px;
 
   @media (max-width: $tablet) {
     grid-row: 2/3;
@@ -45,12 +50,13 @@
   @media (max-width: $mobile) {
     flex-direction: column;
     padding-top: 25px;
+    min-width: auto;
   }
 }
 
 .footer__list {
   &:not(:last-child) {
-    margin-right: 67px;
+    margin-right: 75px;
 
     @media (max-width: $tablet) {
       margin-right: 90px;

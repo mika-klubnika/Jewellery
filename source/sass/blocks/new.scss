@@ -2,7 +2,7 @@
   text-align: center;
 
   padding-top: 120px;
-  padding-bottom: 60px;
+  padding-bottom: 58px;
 
   @media (max-width: $tablet) {
     padding-top: 70px;
@@ -17,7 +17,7 @@
 .new__link {
   padding-bottom: 0;
 
-  @media (max-width: $mobile) {
+  @media (max-width: $tablet) {
     padding-bottom: 5px;
   }
 }

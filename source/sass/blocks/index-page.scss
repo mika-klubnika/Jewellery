@@ -1,0 +1,26 @@
+.index-page {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 30px;
+}
+
+.index-page__logo svg {
+  width: 66px;
+  height: 66px;
+  color: var(--gold);
+}
+
+.index-links {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 100px;
+  width: 100%;
+}
+
+.index-links a {
+  margin-bottom: 50px;
+  font-size: 30px;
+  color: var(--dark);
+}

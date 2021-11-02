@@ -58,6 +58,7 @@
 
     border: none;
     background-color: var(--transparent);
+    cursor: pointer;
   }
 
   @media (max-width: $mobile) {
@@ -67,6 +68,15 @@
 
 .header__toggle svg {
   stroke: var(--dark);
+}
+
+.header__toggle:hover svg,
+.header__toggle:focus svg {
+  stroke: var(--gold);
+}
+
+.header__toggle:active svg {
+  opacity: 0.6;
 }
 
 .header form {
@@ -82,11 +92,11 @@
     grid-column: 1/-1;
 
     display: none;
-    margin-top: 40px;
+    margin-top: 34px;
   }
 
   @media (max-width: $mobile) {
-    margin-top: 30px;
+    margin-top: 24px;
   }
 }
 
@@ -190,9 +200,6 @@
   white-space: nowrap;
 
   color: var(--dark);
-  border: none;
-  background-color: var(--transparent);
-  cursor: pointer;
 
   @media (max-width: $tablet) {
     margin-left: 0;
@@ -217,6 +224,15 @@
     display: block;
     stroke: var(--dark);
   }
+}
+
+.header__cart:hover svg,
+.header__cart:focus svg {
+  stroke: var(--gold);
+}
+
+.header__cart:active svg {
+  opacity: 0.6;
 }
 
 .header--open,

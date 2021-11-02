@@ -6,12 +6,30 @@
 .form-accordion__item--nojs .form-accordion__block {
   display: flex;
   flex-direction: column;
-  padding: 0 25px 28px 25px;
+  padding: 22px 25px 27px;
+
+  @media (max-width: $tablet) {
+    padding-bottom: 37px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-bottom: 27px;
+  }
 }
 
-.form-accordion__item--active .control {
-  margin-top: 4px;
-  padding-bottom: 17px;
+.form-accordion__item--active {
+  .control {
+    margin-top: 4px;
+    padding-bottom: 17px;
+
+    @media (max-width: $tablet) {
+      margin-top: 10px;
+    }
+  }
+
+  .form-accordion__button {
+    padding-bottom: 0;
+  }
 }
 
 .form-accordion__toggle {
@@ -22,6 +40,12 @@
   &:hover,
   &:focus {
     outline: 1px solid var(--gold);
+  }
+}
+
+.form-accordion__toggle svg {
+  @media (max-width: $tablet) {
+    width: 28px;
   }
 }
 

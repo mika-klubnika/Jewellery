@@ -40,7 +40,7 @@
         <input type="search" name="search" id="search" placeholder="Type here to search">
       </form>
 
-      <a class="header__logo" href="index.html" aria-label="Jewellery logo">
+      <a class="header__logo" href="main.html" aria-label="Jewellery logo">
         <svg width="66" height="66">
           <use xlink:href="img/sprite.svg#logo"></use>
         </svg>
@@ -49,19 +49,19 @@
       <div class="header__user-menu">
         <a class="header__login" href="login.html">Login</a>
 
-        <button class="header__cart">
+        <a class="header__cart" href="#" aria-label="Cart">
           <span>Cart 0</span>
           <svg width="20" height="18">
             <use xlink:href="img/sprite.svg#cart"></use>
           </svg>
-        </button>
+        </a>
       </div>
     </div>
     <nav class="navigation">
       <div class="container">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a>What’s new</a>
+            <a href="#">What’s new</a>
           </li>
           <li class="navigation__item">
             <a href="#">Chokers</a>
@@ -201,10 +201,10 @@
               </div>
               <div class="control__price">
                 <label for="min-price">$
-                  <input type="number" name="min-price" id="min-price" placeholder="$ 55" value="55" min="0">
+                  <input type="number" name="min-price" id="min-price" placeholder="55" value="55" min="0">
                 </label>
                 <label for="max-price">$
-                  <input type="number" name="max-price" id="max-price" placeholder="$ 155" value="155">
+                  <input type="number" name="max-price" id="max-price" placeholder="155" value="155" min="1">
                 </label>
               </div>
             </div>
@@ -220,7 +220,7 @@
         </form>
       </aside>
 
-      <div>
+      <div class="catalog__wrap-product">
         <ul class="catalog__product">
           <li class="catalog__item">
             <a class="product" href="#">
