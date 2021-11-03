@@ -186,6 +186,11 @@ if (document.querySelector('.swiper-pagination') &&
       centeredSlides: false,
       centeredSlidesBounds: true,
 
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+      },
+
       pagination: {
         el: '.slider__pagination--desktop',
         clickable: 'true',
@@ -213,11 +218,16 @@ if (document.querySelector('.swiper-pagination') &&
   };
 
   const getBullets = () => {
-    return bullets = paginationBlock.children;
+    let bullets;
+    if(swiperPaginationBlock) {
+      bullets = swiperPaginationBlock.children;
+    }
+    return bullets
   }
 
   const setMobileTotalBullet = (bullets) => {
-    return totalBullets = bullets.length;
+    let totalBullets = bullets.length;
+    return totalBullets;
   }
 
   const getCurrentBullet = (bullets) => {
@@ -227,7 +237,6 @@ if (document.querySelector('.swiper-pagination') &&
         currentBullet = +element.textContent;
       }
     });
-
     return currentBullet;
   }
 
@@ -244,14 +253,14 @@ if (document.querySelector('.swiper-pagination') &&
 
   const setMobilePagination = () => {
     let bullets = getBullets();
-    setMobilePagination(bullets);
+    changeIndex(bullets);
   }
 
-  const changeBreakpoint = (bullets) => {
+  const changeBreakpoint = () => {
     let viewport = document.documentElement.clientWidth;
 
     if (viewport < BREAKPOINT_MOBILE) {
-      changeIndex(bullets);
+      setMobilePagination()
     }
   }
 
