@@ -186,11 +186,6 @@ if (document.querySelector('.swiper-pagination') &&
       centeredSlides: false,
       centeredSlidesBounds: true,
 
-      keyboard: {
-        enabled: true,
-        onlyInViewport: true,
-      },
-
       pagination: {
         el: '.slider__pagination--desktop',
         clickable: 'true',

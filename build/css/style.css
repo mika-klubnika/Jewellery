@@ -1488,13 +1488,16 @@ input::-webkit-inner-spin-button {
   padding-bottom: 50px; }
   @media (max-width: 1023px) {
     .faq {
-      padding-top: 22px; } }
+      padding-top: 17px; } }
   @media (max-width: 767px) {
     .faq {
-      padding-top: 10px; } }
+      padding-top: 8px; } }
 
 .faq h2 {
   margin-bottom: 45px; }
+  @media (max-width: 1023px) {
+    .faq h2 {
+      margin-bottom: 48px; } }
   @media (max-width: 767px) {
     .faq h2 {
       margin-bottom: 30px;
@@ -1654,7 +1657,8 @@ input::-webkit-inner-spin-button {
     .catalog {
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr;
-      padding-top: 50px; } }
+      padding-top: 50px;
+      padding-bottom: 75px; } }
   @media (max-width: 767px) {
     .catalog {
       padding-top: 40px;
