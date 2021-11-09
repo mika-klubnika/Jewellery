@@ -1,4 +1,17 @@
-.swiper-pagination-bullet {
+.pagination {
+  margin-top: 43px;
+
+  @media (max-width: $tablet) {
+    margin-top: 34px;
+  }
+
+  @media (max-width: $mobile) {
+    align-items: center;
+    margin-top: 32px;
+  }
+}
+
+.pagination__item {
   padding: 7px;
 
   font-weight: 500;
@@ -13,11 +26,11 @@
   cursor: pointer;
 }
 
-.swiper-pagination-bullet-active {
+.pagination__current-page {
   color: var(--dark);
 }
 
-.swiper-mobile-pagination__button {
+.pagination span {
   margin-right: 5px;
   margin-left: 5px;
 
