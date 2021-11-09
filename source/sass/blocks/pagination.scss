@@ -39,6 +39,10 @@
   line-height: 130%;
 
   color: var(--dark);
+
+  background-color: var(--transparent);
+  border: none;
+  border-radius: 0;
 }
 
 .swiper-button-next.swiper-button-disabled,
