@@ -113,7 +113,7 @@
 
 .filter li {
   &:not(:last-child) {
-    margin-bottom: 11px;
+    margin-bottom: 12px;
 
     @media (max-width: $tablet) {
       margin-bottom: 18px;
@@ -161,7 +161,7 @@
 }
 
 .filter__submit {
-  margin-top: 32px;
+  margin-top: 33px;
   color: var(--white);
 
   @media (max-width: $tablet) {
