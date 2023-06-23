@@ -1,10 +1,11 @@
 <h1>Акселератор. Проект - Jewellery.</h1>
+https://mika-klubnika.github.io/Jewellery/
 
 <h2>Краткая инструкция по работе.</h2>
 
 <h3>Для начала работы у вас должен быть установлен:</h3>
 <ul>
-  <li>Node.js v.10.15.3</li>
+  <li>Node.js v.14.15.0</li>
   <li>Gulp v4</li>
   <li>npm last version</li>
 </ul>
